@@ -1,0 +1,19 @@
+{
+  "name": "bechamel.grid",
+  "version": "0.0.1-alpha",
+  "authors": [
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>",
+    "cbfranca <cleidsonbf@gmail.com>"
+  ],
+  "main": [
+    "scss/grid.scss"
+  ],
+   "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
