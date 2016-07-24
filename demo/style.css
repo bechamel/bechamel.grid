@@ -12,6 +12,7 @@ html {
 body {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   height: 100%;
   margin: 0;
 }
@@ -100,8 +101,7 @@ h3 {
 }
 
 a {
-  color: hsl(200,100%,40%);
-  text-decoration: none;
+  color:inherit;
   transition: color 300ms ease-out;
 }
 
@@ -116,8 +116,8 @@ a {
 .footer {
   width: 100%;
   padding: 1rem;
-  color: rgba(255, 255, 255, 0.6);
-  background: hsl(200,100%,5%);
+  color: rgba(255, 255, 255, 0.8);
+  background: hsl(200,10%,40%);
   font-size: 14px;
   text-align: center;
 }
