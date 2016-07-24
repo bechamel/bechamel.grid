@@ -10,7 +10,6 @@
 @mixin grid($gutter: $grid-gutter){
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   margin: -($gutter / 2);
   box-sizing: border-box;
 
