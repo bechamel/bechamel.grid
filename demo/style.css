@@ -14,8 +14,6 @@ body {
 }
 
 .header {
-  padding-left: 1rem;
-  padding-right: 1rem;
   color: white;
   background: hsl(200,100%,40%);
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 3px inset,
@@ -70,14 +68,14 @@ body {
 
 .container {
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (min-width: 960px) {
   .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     max-width: 1600px;
   }
 }
