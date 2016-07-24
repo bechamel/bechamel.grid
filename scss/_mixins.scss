@@ -11,7 +11,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 ($gutter / 2);
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
   box-sizing: border-box;
 }
 

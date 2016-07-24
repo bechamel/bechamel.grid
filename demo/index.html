@@ -1,102 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>Bechamel Grid - Demo</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" >
-  <link href="style.css" rel="stylesheet">
-  <link href="../dist/css/grid.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Bechamel Grid - Demo</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" >
+	<link href="style.css" rel="stylesheet">
+	<link href="../dist/css/grid.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <header class="header  animated slideInDown">
-    <h1>Bechamel Grid</h1>
-    <h2>A semantic and responsive system grid.</h2>
+	<header class="header  animated slideInDown">
+		<h1>Bechamel Grid</h1>
+		<h2>A semantic and responsive system grid.</h2>
 
-    <nav class="navigation">
-      <!-- <a href="#example" class="active">Example</a> -->
-      <div class="navigation--space"></div>
-      <a href="//github.com/bechamel/bechamel.grid" target="_blank">GitHub &raquo;</a>
-    </nav>
-  </header>
+		<nav class="navigation">
+			<!-- <a href="#example" class="active">Example</a> -->
+			<div class="navigation--space"></div>
+			<a href="//github.com/bechamel/bechamel.grid" target="_blank">GitHub &raquo;</a>
+		</nav>
+	</header>
 
-  <main class="main  animated slideInUp">
+	<main class="main  animated slideInUp">
 
-    <div class="page">
+		<div class="page">
 
-      <div class="container"><h3>Different cell sizes</h3></div>
-      <div class="grid">
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-      </div>
+			<div class="container">
 
-      <div class="grid">
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-      </div>
+				<h3>Different cell sizes</h3>
+				<div class="grid">
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+					<div class="cell cell__1"><div class="box">1</div></div>
+				</div>
 
-      <div class="grid">
-        <div class="cell cell__6"><div class="box">6</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__2"><div class="box">2</div></div>
-      </div>
+				<div class="grid">
+					<div class="cell cell__4"><div class="box">4</div></div>
+					<div class="cell cell__4"><div class="box">4</div></div>
+					<div class="cell cell__4"><div class="box">4</div></div>
+					<div class="cell cell__4"><div class="box">4</div></div>
+				</div>
 
-      <div class="container"><h3>Custom cell sizes for breakpoints</h3></div>
-      <div class="grid">
-        <div class="cell cell__6 cell__8__md"><div class="box">6 (8 desktop)</div></div>
-        <div class="cell cell__4 cell__6__sm"><div class="box">4 (6 tablet)</div></div>
-        <div class="cell cell__2"><div class="box">2 (2 phone)</div></div>
-      </div>
+				<div class="grid">
+					<div class="cell cell__6"><div class="box">6</div></div>
+					<div class="cell cell__4"><div class="box">4</div></div>
+					<div class="cell cell__2"><div class="box">2</div></div>
+				</div>
 
-      <div class="container"><h3>Grid default</h3></div>
-      <div class="grid">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-      </div>
+				<h3>Custom cell sizes for breakpoints</h3>
+				<div class="grid">
+					<div class="cell cell__6 cell__8__md"><div class="box">6 (8 desktop)</div></div>
+					<div class="cell cell__4 cell__6__sm"><div class="box">4 (6 tablet)</div></div>
+					<div class="cell cell__2"><div class="box">2 (2 phone)</div></div>
+				</div>
 
-      <div class="container"><h3>Grid justify between</h3></div>
-      <div class="grid" data-justify="between">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-      </div>
+				<h3>Grid default</h3>
+				<div class="grid">
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+				</div>
 
-      <div class="container"><h3>Grid justify around</h3></div>
-      <div class="grid" data-justify="around">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-      </div>
+				<h3>Grid justify between</h3>
+				<div class="grid" data-justify="between">
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+				</div>
 
-    </div>
+				<h3>Grid justify around</h3>
+				<div class="grid" data-justify="around">
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+					<div class="cell"><div class="box">default</div></div>
+				</div>
 
-  </main>
+			</div>
 
-  <footer class="footer">
-    Build with ❤ by <a href="//github.com/bechamel">bechamel</a>
-  </footer>
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		Build with ❤ by <a href="//github.com/bechamel">bechamel</a>
+	</footer>
 
 </body>
 </html>
