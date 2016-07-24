@@ -4,6 +4,8 @@
   width: 100%;
   margin: -8px;
   box-sizing: border-box; }
+  .grid + .grid {
+    padding-top: 8px; }
   .grid[data-justify="left"] {
     justify-content: flex-start; }
   .grid[data-justify="right"] {
