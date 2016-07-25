@@ -154,7 +154,7 @@
   @media (min-width: $grid-large-desktop-breakpoint) {
 
     // Define partial sizes for all numbers of columns.
-    @for $i from 1 through $grid-large-desktop-columns {
+    @for $i from 1 through ($grid-large-desktop-columns - 1) {
       &__#{$i},
       &__#{$i}__lg {
         @include partial-size($i, $grid-large-desktop-columns, $grid-gutter);
