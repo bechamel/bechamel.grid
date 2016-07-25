@@ -83,8 +83,8 @@
 
     // Define 100% for everything else.
     @for $i from $grid-tablet-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__sm {
+      &__#{$i},
+      &__#{$i}__sm {
         @include full-size($grid-gutter);
       }
     }
@@ -123,8 +123,8 @@
 
     // Define 100% for everything else.
     @for $i from $grid-desktop-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__md {
+      &__#{$i},
+      &__#{$i}__md {
         @include full-size($grid-gutter);
       }
     }
@@ -163,8 +163,8 @@
 
     // Define 100% for everything else.
     @for $i from $grid-large-desktop-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__lg {
+      &__#{$i},
+      &__#{$i}__lg {
         @include full-size($grid-gutter);
       }
     }
