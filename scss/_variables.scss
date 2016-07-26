@@ -15,3 +15,12 @@ $grid-hd-desktop-breakpoint: 1600px !default;
 
 $grid-classname: 'grid' !default;
 $cell-classname: 'cell' !default;
+
+// Container
+$gutter: 1rem;
+// Define the maximum width of `.container` for different screen sizes.
+$container-desktop: $grid-desktop-breakpoint !default;
+$container-large-desktop: $grid-large-desktop-breakpoint !default;
+$container-hd-desktop: $grid-hd-desktop-breakpoint !default;
+
+$text-container-max-width: 640px;

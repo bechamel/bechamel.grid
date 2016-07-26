@@ -1,3 +1,9 @@
+//Create container
+@mixin container( $gutter: $grid-gutter ) {
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
 // Mixins for width calculation.
 @mixin partial-size($size, $columns, $gutter) {
   width: calc(#{(($size / $columns) * 100)+"%"} - #{$gutter});

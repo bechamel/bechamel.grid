@@ -1,3 +1,34 @@
+.container {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%; }
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+@media (min-width: 960px) {
+  .container[data-align="center"] {
+    max-width: 960px; } }
+
+@media (min-width: 1280px) {
+  .container[data-align="center"] {
+    max-width: 1280px; } }
+
+@media (min-width: 1600px) {
+  .container[data-align="center"] {
+    max-width: 1600px; } }
+
+.container[data-align="center"] {
+  margin-left: auto;
+  margin-right: auto; }
+
+.text_container {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
