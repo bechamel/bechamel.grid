@@ -1,0 +1,50 @@
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+%container_fluid {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.container_fluid {
+  @extend %container_fluid;
+  @include container;
+}
+
+// Container fixed width
+//
+%container__breakpoints {
+  @media (min-width: $grid-desktop-breakpoint) {
+    max-width: $container-desktop;
+  }
+  @media (min-width: $grid-large-desktop-breakpoint) {
+    max-width: $container-large-desktop;
+  }
+  @media (min-width: $grid-hd-desktop-breakpoint) {
+    max-width: $container-hd-desktop;
+  }
+}
+
+%container {
+  @extend %container_fluid;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %container__breakpoints;
+}
+
+.container {
+  @extend %container_fluid;
+  @extend %container;
+  @include container;
+}
+
+// Text container
+//
+// Used to texts containers
+.text_container {
+  max-width: $text-container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,3 +1,9 @@
+// Create container
+@mixin container( $padding: $container-padding ) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
 // Mixins for width calculation.
 @mixin partial-size($size, $columns, $gutter) {
   width: calc(#{(($size / $columns) * 100)+"%"} - #{$gutter});
@@ -8,10 +14,10 @@
 }
 
 @mixin grid($gutter: $grid-gutter){
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   margin: -($gutter / 2);
-  box-sizing: border-box;
 
   & + & {
     padding-top: ($gutter / 2);
@@ -19,8 +25,8 @@
 }
 
 @mixin cell( $gutter: $grid-gutter ) {
-  margin: $gutter / 2;
   box-sizing: border-box;
+  margin: $gutter / 2;
 }
 
 // @mixin offset-size($size, $columns, $gutter) {
