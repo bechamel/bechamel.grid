@@ -1,20 +1,20 @@
-%box-sizing-border-box {
-  box-sizing: border-box;
-}
-
 // Fluid container
 //
 // Utilizes the mixin meant for fixed width containers, but without any defined
 // width for fluid, full width layouts.
-%container {
+
+%container_fluid {
+  box-sizing: border-box;
   width: 100%;
-  @extend %box-sizing-border-box;
 }
 
-%container__padding {
+.container_fluid {
+  @extend %container_fluid;
   @include container;
 }
 
+// Container fixed width
+//
 %container__breakpoints {
   @media (min-width: $grid-desktop-breakpoint) {
     max-width: $container-desktop;
@@ -27,20 +27,17 @@
   }
 }
 
-%container__centered {
+%container {
+  @extend %container_fluid;
   margin-left: auto;
   margin-right: auto;
   @extend %container__breakpoints;
 }
 
 .container {
+  @extend %container_fluid;
   @extend %container;
-  @extend %container__padding;
-
-  // Set the container width and centered;
-  &[data-align="center"] {
-    @extend %container__centered;
-  }
+  @include container;
 }
 
 // Text container

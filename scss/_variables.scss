@@ -1,3 +1,5 @@
+// Grid
+//
 $grid-gutter: 24px !default;
 
 $grid-columns: 4 !default;
@@ -17,7 +19,8 @@ $grid-classname: 'grid' !default;
 $cell-classname: 'cell' !default;
 
 // Container
-$gutter: 1rem;
+//
+$container-padding: $grid-gutter !default;
 // Define the maximum width of `.container` for different screen sizes.
 $container-desktop: $grid-desktop-breakpoint !default;
 $container-large-desktop: $grid-large-desktop-breakpoint !default;

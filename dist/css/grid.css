@@ -1,28 +1,30 @@
-.container {
-  box-sizing: border-box; }
-
-.container {
+.container_fluid, .container {
+  box-sizing: border-box;
   width: 100%; }
 
-.container {
+.container_fluid {
   padding-left: 24px;
   padding-right: 24px; }
 
 @media (min-width: 960px) {
-  .container[data-align="center"] {
+  .container {
     max-width: 960px; } }
 
 @media (min-width: 1280px) {
-  .container[data-align="center"] {
+  .container {
     max-width: 1280px; } }
 
 @media (min-width: 1600px) {
-  .container[data-align="center"] {
+  .container {
     max-width: 1600px; } }
 
-.container[data-align="center"] {
+.container {
   margin-left: auto;
   margin-right: auto; }
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px; }
 
 .text_container {
   max-width: 640px;
@@ -30,10 +32,10 @@
   margin-right: auto; }
 
 .grid {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin: -12px;
-  box-sizing: border-box; }
+  margin: -12px; }
   .grid + .grid {
     padding-top: 12px; }
   .grid[data-justify="left"] {
@@ -48,8 +50,8 @@
     justify-content: space-around; }
 
 .cell {
-  margin: 12px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 12px; }
   .cell__1 {
     width: calc(25% - 24px); }
   .cell__2 {
