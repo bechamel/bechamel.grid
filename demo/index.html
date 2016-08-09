@@ -26,68 +26,64 @@
 
     <div class="page">
 
-      <div class="container"><h3>Different cell sizes</h3></div>
+      <div class="container_fluid"><h3>Different cell sizes</h3></div>
       <div class="grid">
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
-        <div class="cell cell__1"><div class="box">1</div></div>
+        <div class="cell" data-column="1">1</div>
+        <div class="cell" data-column="9">9</div>
+        <div class="cell" data-column="2">2</div>
+        <div class="cell" data-column="8">8</div>
+        <div class="cell" data-column="3">3</div>
+        <div class="cell" data-column="7">7</div>
+        <div class="cell" data-column="4">4</div>
+        <div class="cell" data-column="6">6</div>
+        <div class="cell" data-column="5">5</div>
+        <div class="cell" data-column="5">5</div>
       </div>
 
+      <div class="container_fluid"><h3>Custom cell sizes for breakpoints</h3></div>
       <div class="grid">
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
+        <div class="cell" data-column="6" data-column-desktop="4">6 (4 desktop)</div>
+        <div class="cell" data-column="4" data-column-desktop="6">4 (6 tablet)</div>
       </div>
 
+      <div class="container_fluid"><h3>Grid default</h3></div>
       <div class="grid">
-        <div class="cell cell__6"><div class="box">6</div></div>
-        <div class="cell cell__4"><div class="box">4</div></div>
-        <div class="cell cell__2"><div class="box">2</div></div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
       </div>
 
-      <div class="container"><h3>Custom cell sizes for breakpoints</h3></div>
-      <div class="grid">
-        <div class="cell cell__6 cell__8__md"><div class="box">6 (8 desktop)</div></div>
-        <div class="cell cell__4 cell__6__sm"><div class="box">4 (6 tablet)</div></div>
-        <div class="cell cell__2"><div class="box">2 (2 phone)</div></div>
+      <div class="container_fluid"><h3>Grid justify center</h3></div>
+      <div class="grid" data-justify="center">
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
       </div>
 
-      <div class="container"><h3>Grid default</h3></div>
-      <div class="grid">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
+      <div class="container_fluid"><h3>Grid justify right</h3></div>
+      <div class="grid" data-justify="right">
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
       </div>
 
-      <div class="container"><h3>Grid justify between</h3></div>
+      <div class="container_fluid"><h3>Grid justify between</h3></div>
       <div class="grid" data-justify="between">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
       </div>
 
-      <div class="container"><h3>Grid justify around</h3></div>
+      <div class="container_fluid"><h3>Grid justify around</h3></div>
       <div class="grid" data-justify="around">
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
-        <div class="cell"><div class="box">default</div></div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
+        <div class="cell">default</div>
       </div>
 
     </div>

@@ -1,32 +1,31 @@
-// Mixins for width calculation.
-@mixin partial-size($size, $columns, $gutter) {
+// Mixins
+//
+@mixin container-gutter($padding: $container-padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin grid-gutter($gutter: $grid-gutter) {
+  padding: $gutter/2;
+
+  .container & {
+    padding: 0;
+    margin: -($grid-gutter/2);
+  }
+}
+
+// Width calculation.
+@mixin partial-size($size, $columns: $grid-columns, $gutter: $grid-gutter) {
   width: calc(#{(($size / $columns) * 100)+"%"} - #{$gutter});
 }
 
-@mixin full-size($gutter) {
+@mixin full-size($gutter: $grid-gutter) {
   @include partial-size(1, 1, $gutter);
 }
 
-@mixin grid($gutter: $grid-gutter){
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 0 ($gutter / 2);
-  box-sizing: border-box;
+@mixin offset-size($size, $columns: $grid-columns, $gutter: $grid-gutter) {
+  margin-left: calc(#{(($size / $columns) * 100)+"%"} + #{$gutter});
 }
-
-@mixin cell( $gutter: $grid-gutter ) {
-  margin: $gutter / 2;
-  box-sizing: border-box;
-}
-
-// @mixin offset-size($size, $columns, $gutter) {
-//   margin-left: calc(#{(($size / $columns) * 100)+"%"} + #{$gutter / 2});
-
-//   .mdl-grid.mdl-grid--no-spacing > & {
-//     margin-left: #{(($size / $columns) * 100)+"%"};
-//   }
-// }
 
 
 
@@ -36,32 +35,29 @@
 
   // Define partial sizes for columnNumber < totalColumns.
   @for $i from 1 through ($grid-columns - 1) {
-    &__#{$i} {
-      @include partial-size($i, $grid-columns, $grid-gutter);
+    &[data-column='#{$i}'] {
+      @include partial-size($i);
     }
   }
 
   // Define 100% for everything else.
-  @for $i from $grid-columns through $grid-max-columns {
-    &__#{$i} {
-      @include full-size($grid-gutter);
-    }
+  &[data-column='#{$grid-columns}'] {
+    @include full-size;
   }
 
   // Define order override classes.
-  @for $i from 1 through $grid-max-columns {
-    &__order__#{$i} {
+  @for $i from 1 through $grid-columns {
+    &[data-order='#{$i}'] {
       order: $i;
     }
   }
 
   // Define valid phone offsets.
-  // @for $i from 1 through ($grid-phone-columns - 1) {
-  //   .col--#{$i}-offset,
-  //   .col--#{$i}-offset-phone.col--#{$i}-offset-phone {
-  //     @include offset-size($i, $grid-phone-columns, $grid-phone-gutter);
-  //   }
-  // }
+  @for $i from 1 through ($grid-columns - 1) {
+    &[data-offset='#{$i}'] {
+      @include offset-size($i);
+    }
+  }
 }
 
 
@@ -71,75 +67,65 @@
   @media (min-width: $grid-tablet-breakpoint) {
 
     // Define partial sizes for columnNumber < totalColumns.
-    @for $i from 1 through ($grid-tablet-columns - 1) {
-      &__#{$i},
-      &__#{$i}__sm {
-        @include partial-size($i, $grid-tablet-columns, $grid-gutter);
+    @for $i from 1 through ($grid-columns - 1) {
+      &[data-column-tablet='#{$i}'] {
+        @include partial-size($i);
       }
     }
 
     // Define 100% for everything else.
-    @for $i from $grid-tablet-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__sm {
-        @include full-size($grid-gutter);
-      }
+    &[data-column-tablet='#{$grid-columns}'] {
+      @include full-size;
     }
 
     // Define order override classes.
-    @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__sm {
+    @for $i from 1 through $grid-columns {
+      &[data-order-tablet='#{$i}'] {
         order: $i;
       }
     }
 
     // Define valid tablet offsets.
-    // @for $i from 1 through ($grid-tablet-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-tablet.col--#{$i}-offset-tablet {
-    //     @include offset-size($i, $grid-tablet-columns, $grid-tablet-gutter);
-    //   }
-    // }
+    @for $i from 1 through ($grid-columns - 1) {
+      &[data-offset-tablet='#{$i}'] {
+        @include offset-size($i);
+      }
+    }
 
   }
 }
 
 
-//  Generate desktop columns
+// Generate desktop columns
 //
 @mixin desktop_columns () {
   @media (min-width: $grid-desktop-breakpoint) {
 
     // Define partial sizes for all numbers of columns.
-    @for $i from 1 through ($grid-desktop-columns - 1) {
-      &__#{$i},
-      &__#{$i}__md {
-        @include partial-size($i, $grid-desktop-columns, $grid-gutter);
+    @for $i from 1 through ($grid-columns - 1) {
+      &[data-column-desktop='#{$i}'] {
+        @include partial-size($i);
       }
     }
 
     // Define 100% for everything else.
-    @for $i from $grid-desktop-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__md {
-        @include full-size($grid-gutter);
-      }
+    &[data-column-desktop='#{$grid-gutter}'] {
+      @include full-size($grid-gutter);
     }
 
     // Define order override classes.
-    @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__md {
+    @for $i from 1 through $grid-columns {
+      &[data-order-desktop='#{$i}'] {
         order: $i;
       }
     }
 
     // Define valid desktop offsets.
-    // @for $i from 1 through ($grid-desktop-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-desktop {
-    //     @include offset-size($i, $grid-desktop-columns, $grid-desktop-gutter);
-    //   }
-    // }
+    @for $i from 1 through ($grid-columns - 1) {
+      &[data-offset-desktop='#{$i}'] {
+        @include offset-size($i);
+      }
+    }
 
   }
 }
@@ -151,35 +137,30 @@
   @media (min-width: $grid-large-desktop-breakpoint) {
 
     // Define partial sizes for all numbers of columns.
-    @for $i from 1 through $grid-large-desktop-columns {
-      &__#{$i},
-      &__#{$i}__lg {
-        @include partial-size($i, $grid-large-desktop-columns, $grid-gutter);
+    @for $i from 1 through $grid-columns {
+      &[data-column-large-desktop='#{$i}'] {
+        @include partial-size($i);
       }
     }
 
     // Define 100% for everything else.
-    @for $i from $grid-large-desktop-columns through $grid-max-columns {
-      &--#{$i},
-      &--#{$i}__lg {
-        @include full-size($grid-gutter);
-      }
+    &[data-column-large-desktop='#{$grid-columns}'] {
+      @include full-size($grid-gutter);
     }
 
     // Define order override classes.
-    @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__lg {
+    @for $i from 1 through $grid-columns {
+      &[data-order-large-desktop='#{$i}'] {
         order: $i;
       }
     }
 
     // Define valid desktop offsets.
-    // @for $i from 1 through ($grid-large-desktop-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-large-desktop.col--#{$i}-offset-large-desktop {
-    //     @include offset-size($i, $grid-large-desktop-columns, $grid-large-desktop-gutter);
-    //   }
-    // }
+    @for $i from 1 through ($grid-columns - 1) {
+      &[data-offset-large-desktop='#{$i}'] {
+        @include offset-size($i);
+      }
+    }
 
   }
 }

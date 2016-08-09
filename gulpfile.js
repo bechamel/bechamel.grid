@@ -29,7 +29,7 @@ gulp.task('cssmin', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('scss/**/*.scss', ['sass']);
+  gulp.watch('scss/**/*.scss', ['build']);
 });
 
 gulp.task('default', ['watch']);

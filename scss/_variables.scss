@@ -1,11 +1,12 @@
+// Grid
+//
 $grid-gutter: 16px !default;
+$grid-columns: 10 !default;
 
-$grid-columns: 4 !default;
-$grid-tablet-columns: 8 !default;
-$grid-desktop-columns: 12 !default;
-$grid-large-desktop-columns: 16 !default;
-
-$grid-max-columns: $grid-large-desktop-columns !default;
+$grid-tablet-namespace: 'tablet';
+$grid-desktop-namespace: 'desktop';
+$grid-large-desktop-namespace: 'large-desktop';
+$grid-hd-desktop-namespace: 'hd-desktop';
 
 $grid-large-phone-breakpoint: 480px !default;
 $grid-tablet-breakpoint: 640px !default;
@@ -15,3 +16,13 @@ $grid-hd-desktop-breakpoint: 1600px !default;
 
 $grid-classname: 'grid' !default;
 $cell-classname: 'cell' !default;
+
+// Container
+//
+$container-padding: $grid-gutter !default;
+// Define the maximum width of `.container` for different screen sizes.
+$container-desktop: $grid-desktop-breakpoint !default;
+$container-large-desktop: $grid-large-desktop-breakpoint !default;
+$container-hd-desktop: $grid-hd-desktop-breakpoint !default;
+
+$text-container-max-width: 640px;

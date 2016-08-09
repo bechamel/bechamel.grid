@@ -116,9 +116,8 @@ a {
   transition: color 300ms ease-out;
 }
 
-.box {
+.cell {
   padding: 1rem;
-  /*margin-bottom: 1rem;*/
   color: rgba(0, 0, 0, 0.6);
   background: rgba(0, 0, 0, 0.05);
   border-radius: 3px;
