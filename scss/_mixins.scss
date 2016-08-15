@@ -58,6 +58,13 @@
       @include offset-size($i);
     }
   }
+
+  // Fixed cell sizes
+  @for $i from 1 through 8 {
+    .#{$grid-classname}[data-columns='#{$i}'] & {
+      @include partial-size(10 / $i);
+    }
+  }
 }
 
 
@@ -89,6 +96,13 @@
     @for $i from 1 through ($grid-columns - 1) {
       &[data-offset-tablet='#{$i}'] {
         @include offset-size($i);
+      }
+    }
+
+    // Fixed cell sizes for tablets
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-tablet='#{$i}'] & {
+        @include partial-size(10 / $i);
       }
     }
 
@@ -127,6 +141,13 @@
       }
     }
 
+    // Fixed cell sizes for desktop
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-desktop='#{$i}'] & {
+        @include partial-size(10 / $i);
+      }
+    }
+
   }
 }
 
@@ -155,10 +176,17 @@
       }
     }
 
-    // Define valid desktop offsets.
+    // Define valid large desktop offsets.
     @for $i from 1 through ($grid-columns - 1) {
       &[data-offset-large-desktop='#{$i}'] {
         @include offset-size($i);
+      }
+    }
+
+    // Fixed cell sizes for large desktop
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-large-desktop='#{$i}'] & {
+        @include partial-size(10 / $i);
       }
     }
 

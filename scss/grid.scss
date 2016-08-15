@@ -31,12 +31,13 @@
     justify-content: space-around;
   }
 
-  &[data-columns="equal"] {
-    flex-wrap: nowrap;
-    .#{$cell-classname} {
-      width: 100%;
-    }
-  }
+  // &[data-columns="equal"] {
+  //   flex-wrap: nowrap;
+  //   .#{$cell-classname} {
+  //     width: 100%;
+  //   }
+  // }
+
 }
 
 
@@ -74,4 +75,5 @@
 
   // Generate large desktop columns
   @include large_desktop_columns();
+
 }
