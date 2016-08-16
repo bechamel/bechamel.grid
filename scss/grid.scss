@@ -31,20 +31,14 @@
     justify-content: space-around;
   }
 
-  // &[data-columns="equal"] {
-  //   flex-wrap: nowrap;
-  //   .#{$cell-classname} {
-  //     width: 100%;
-  //   }
-  // }
-
 }
 
 
 // Cell styles and align classes
 .#{$cell-classname} {
   box-sizing: border-box;
-  overflow: hidden;
+  width: 100%;
+  flex-grow: 1;
   margin: $grid-gutter/2;
 
   // Helper align classes
