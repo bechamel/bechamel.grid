@@ -24,7 +24,9 @@
   max-width: 640px; }
 
 .grid {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   box-sizing: border-box;
   padding: 8px; }
@@ -32,71 +34,129 @@
     padding: 0;
     margin: -8px; }
   .grid[data-justify="left"] {
+    -ms-flex-pack: start;
     justify-content: flex-start; }
   .grid[data-justify="right"] {
+    -ms-flex-pack: end;
     justify-content: flex-end; }
   .grid[data-justify="center"] {
+    -ms-flex-pack: center;
     justify-content: center; }
   .grid[data-justify="between"] {
+    -ms-flex-pack: justify;
     justify-content: space-between; }
   .grid[data-justify="around"] {
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
 
 .cell {
   box-sizing: border-box;
-  width: 100%;
+  -ms-flex-positive: 1;
   flex-grow: 1;
-  margin: 8px; }
+  margin: 8px;
+  max-width: calc(100% - 16px);
+  -ms-flex-preferred-size: calc(100% - 16px);
+  flex-basis: calc(100% - 16px); }
   .cell[data-align="top"] {
+    -ms-flex-item-align: start;
     align-self: flex-start; }
   .cell[data-align="middle"] {
+    -ms-flex-item-align: center;
     align-self: center; }
   .cell[data-align="bottom"] {
+    -ms-flex-item-align: end;
     align-self: flex-end; }
   .cell[data-align="stretch"] {
+    -ms-flex-item-align: stretch;
     align-self: stretch; }
   .cell[data-column='10'] {
+    max-width: calc(10% - 16px);
+    -ms-flex-preferred-size: calc(10% - 16px);
     flex-basis: calc(10% - 16px); }
   .cell[data-column='20'] {
+    max-width: calc(20% - 16px);
+    -ms-flex-preferred-size: calc(20% - 16px);
     flex-basis: calc(20% - 16px); }
   .cell[data-column='25'] {
+    max-width: calc(25% - 16px);
+    -ms-flex-preferred-size: calc(25% - 16px);
     flex-basis: calc(25% - 16px); }
   .cell[data-column='33'] {
+    max-width: calc(33.33333% - 16px);
+    -ms-flex-preferred-size: calc(33.33333% - 16px);
     flex-basis: calc(33.33333% - 16px); }
   .cell[data-column='40'] {
+    max-width: calc(40% - 16px);
+    -ms-flex-preferred-size: calc(40% - 16px);
     flex-basis: calc(40% - 16px); }
   .cell[data-column='50'] {
+    max-width: calc(50% - 16px);
+    -ms-flex-preferred-size: calc(50% - 16px);
     flex-basis: calc(50% - 16px); }
   .cell[data-column='60'] {
+    max-width: calc(60% - 16px);
+    -ms-flex-preferred-size: calc(60% - 16px);
     flex-basis: calc(60% - 16px); }
   .cell[data-column='67'] {
+    max-width: calc(66.66667% - 16px);
+    -ms-flex-preferred-size: calc(66.66667% - 16px);
     flex-basis: calc(66.66667% - 16px); }
   .cell[data-column='75'] {
+    max-width: calc(75% - 16px);
+    -ms-flex-preferred-size: calc(75% - 16px);
     flex-basis: calc(75% - 16px); }
   .cell[data-column='80'] {
+    max-width: calc(80% - 16px);
+    -ms-flex-preferred-size: calc(80% - 16px);
     flex-basis: calc(80% - 16px); }
   .cell[data-column='90'] {
+    max-width: calc(90% - 16px);
+    -ms-flex-preferred-size: calc(90% - 16px);
     flex-basis: calc(90% - 16px); }
-  .cell[data-order='1'] {
-    order: 1; }
-  .cell[data-order='2'] {
-    order: 2; }
-  .cell[data-order='3'] {
-    order: 3; }
-  .cell[data-order='4'] {
-    order: 4; }
-  .cell[data-order='5'] {
-    order: 5; }
-  .cell[data-order='6'] {
-    order: 6; }
-  .cell[data-order='7'] {
-    order: 7; }
-  .cell[data-order='8'] {
-    order: 8; }
-  .cell[data-order='9'] {
-    order: 9; }
   .cell[data-order='10'] {
-    order: 10; }
+    max-width: calc(10% - 16px);
+    -ms-flex-preferred-size: calc(10% - 16px);
+    flex-basis: calc(10% - 16px); }
+  .cell[data-order='20'] {
+    max-width: calc(20% - 16px);
+    -ms-flex-preferred-size: calc(20% - 16px);
+    flex-basis: calc(20% - 16px); }
+  .cell[data-order='25'] {
+    max-width: calc(25% - 16px);
+    -ms-flex-preferred-size: calc(25% - 16px);
+    flex-basis: calc(25% - 16px); }
+  .cell[data-order='33'] {
+    max-width: calc(33.33333% - 16px);
+    -ms-flex-preferred-size: calc(33.33333% - 16px);
+    flex-basis: calc(33.33333% - 16px); }
+  .cell[data-order='40'] {
+    max-width: calc(40% - 16px);
+    -ms-flex-preferred-size: calc(40% - 16px);
+    flex-basis: calc(40% - 16px); }
+  .cell[data-order='50'] {
+    max-width: calc(50% - 16px);
+    -ms-flex-preferred-size: calc(50% - 16px);
+    flex-basis: calc(50% - 16px); }
+  .cell[data-order='60'] {
+    max-width: calc(60% - 16px);
+    -ms-flex-preferred-size: calc(60% - 16px);
+    flex-basis: calc(60% - 16px); }
+  .cell[data-order='67'] {
+    max-width: calc(66.66667% - 16px);
+    -ms-flex-preferred-size: calc(66.66667% - 16px);
+    flex-basis: calc(66.66667% - 16px); }
+  .cell[data-order='75'] {
+    max-width: calc(75% - 16px);
+    -ms-flex-preferred-size: calc(75% - 16px);
+    flex-basis: calc(75% - 16px); }
+  .cell[data-order='80'] {
+    max-width: calc(80% - 16px);
+    -ms-flex-preferred-size: calc(80% - 16px);
+    flex-basis: calc(80% - 16px); }
+  .cell[data-order='90'] {
+    max-width: calc(90% - 16px);
+    -ms-flex-preferred-size: calc(90% - 16px);
+    flex-basis: calc(90% - 16px); }
   .cell[data-offset='1'] {
     margin-left: calc(1% + 16px); }
   .cell[data-offset='2'] {
@@ -116,253 +176,443 @@
   .cell[data-offset='9'] {
     margin-left: calc(9% + 16px); }
   .grid[data-columns='1'] .cell {
+    max-width: calc(100% - 16px);
+    -ms-flex-preferred-size: calc(100% - 16px);
     flex-basis: calc(100% - 16px); }
   .grid[data-columns='2'] .cell {
+    max-width: calc(50% - 16px);
+    -ms-flex-preferred-size: calc(50% - 16px);
     flex-basis: calc(50% - 16px); }
   .grid[data-columns='3'] .cell {
+    max-width: calc(33.33333% - 16px);
+    -ms-flex-preferred-size: calc(33.33333% - 16px);
     flex-basis: calc(33.33333% - 16px); }
   .grid[data-columns='4'] .cell {
+    max-width: calc(25% - 16px);
+    -ms-flex-preferred-size: calc(25% - 16px);
     flex-basis: calc(25% - 16px); }
   .grid[data-columns='5'] .cell {
+    max-width: calc(20% - 16px);
+    -ms-flex-preferred-size: calc(20% - 16px);
     flex-basis: calc(20% - 16px); }
   .grid[data-columns='6'] .cell {
+    max-width: calc(16.66667% - 16px);
+    -ms-flex-preferred-size: calc(16.66667% - 16px);
     flex-basis: calc(16.66667% - 16px); }
   .grid[data-columns='7'] .cell {
+    max-width: calc(14.28571% - 16px);
+    -ms-flex-preferred-size: calc(14.28571% - 16px);
     flex-basis: calc(14.28571% - 16px); }
   .grid[data-columns='8'] .cell {
+    max-width: calc(12.5% - 16px);
+    -ms-flex-preferred-size: calc(12.5% - 16px);
     flex-basis: calc(12.5% - 16px); }
   @media (min-width: 640px) {
-    .cell[data-column-tablet='10'] {
-      flex-basis: calc(10% - 16px); }
-    .cell[data-column-tablet='20'] {
-      flex-basis: calc(20% - 16px); }
-    .cell[data-column-tablet='25'] {
-      flex-basis: calc(25% - 16px); }
-    .cell[data-column-tablet='33'] {
-      flex-basis: calc(33.33333% - 16px); }
-    .cell[data-column-tablet='40'] {
-      flex-basis: calc(40% - 16px); }
-    .cell[data-column-tablet='50'] {
+    .cell {
+      max-width: calc(50% - 16px);
+      -ms-flex-preferred-size: calc(50% - 16px);
       flex-basis: calc(50% - 16px); }
-    .cell[data-column-tablet='60'] {
-      flex-basis: calc(60% - 16px); }
-    .cell[data-column-tablet='67'] {
-      flex-basis: calc(66.66667% - 16px); }
-    .cell[data-column-tablet='75'] {
-      flex-basis: calc(75% - 16px); }
-    .cell[data-column-tablet='80'] {
-      flex-basis: calc(80% - 16px); }
-    .cell[data-column-tablet='90'] {
-      flex-basis: calc(90% - 16px); }
-    .cell[data-order-tablet='1'] {
-      order: 1; }
-    .cell[data-order-tablet='2'] {
-      order: 2; }
-    .cell[data-order-tablet='3'] {
-      order: 3; }
-    .cell[data-order-tablet='4'] {
-      order: 4; }
-    .cell[data-order-tablet='5'] {
-      order: 5; }
-    .cell[data-order-tablet='6'] {
-      order: 6; }
-    .cell[data-order-tablet='7'] {
-      order: 7; }
-    .cell[data-order-tablet='8'] {
-      order: 8; }
-    .cell[data-order-tablet='9'] {
-      order: 9; }
-    .cell[data-order-tablet='10'] {
-      order: 10; }
-    .cell[data-offset-tablet='1'] {
-      margin-left: calc(1% + 16px); }
-    .cell[data-offset-tablet='2'] {
-      margin-left: calc(2% + 16px); }
-    .cell[data-offset-tablet='3'] {
-      margin-left: calc(3% + 16px); }
-    .cell[data-offset-tablet='4'] {
-      margin-left: calc(4% + 16px); }
-    .cell[data-offset-tablet='5'] {
-      margin-left: calc(5% + 16px); }
-    .cell[data-offset-tablet='6'] {
-      margin-left: calc(6% + 16px); }
-    .cell[data-offset-tablet='7'] {
-      margin-left: calc(7% + 16px); }
-    .cell[data-offset-tablet='8'] {
-      margin-left: calc(8% + 16px); }
-    .cell[data-offset-tablet='9'] {
-      margin-left: calc(9% + 16px); }
-    .grid[data-columns-tablet='1'] .cell {
-      flex-basis: calc(10% - 16px); }
-    .grid[data-columns-tablet='2'] .cell {
-      flex-basis: calc(5% - 16px); }
-    .grid[data-columns-tablet='3'] .cell {
-      flex-basis: calc(3.33333% - 16px); }
-    .grid[data-columns-tablet='4'] .cell {
-      flex-basis: calc(2.5% - 16px); }
-    .grid[data-columns-tablet='5'] .cell {
-      flex-basis: calc(2% - 16px); }
-    .grid[data-columns-tablet='6'] .cell {
-      flex-basis: calc(1.66667% - 16px); }
-    .grid[data-columns-tablet='7'] .cell {
-      flex-basis: calc(1.42857% - 16px); }
-    .grid[data-columns-tablet='8'] .cell {
-      flex-basis: calc(1.25% - 16px); } }
+      .cell[data-tablet-column='10'] {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .cell[data-tablet-column='20'] {
+        max-width: calc(20% - 16px);
+        -ms-flex-preferred-size: calc(20% - 16px);
+        flex-basis: calc(20% - 16px); }
+      .cell[data-tablet-column='25'] {
+        max-width: calc(25% - 16px);
+        -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px); }
+      .cell[data-tablet-column='33'] {
+        max-width: calc(33.33333% - 16px);
+        -ms-flex-preferred-size: calc(33.33333% - 16px);
+        flex-basis: calc(33.33333% - 16px); }
+      .cell[data-tablet-column='40'] {
+        max-width: calc(40% - 16px);
+        -ms-flex-preferred-size: calc(40% - 16px);
+        flex-basis: calc(40% - 16px); }
+      .cell[data-tablet-column='50'] {
+        max-width: calc(50% - 16px);
+        -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px); }
+      .cell[data-tablet-column='60'] {
+        max-width: calc(60% - 16px);
+        -ms-flex-preferred-size: calc(60% - 16px);
+        flex-basis: calc(60% - 16px); }
+      .cell[data-tablet-column='67'] {
+        max-width: calc(66.66667% - 16px);
+        -ms-flex-preferred-size: calc(66.66667% - 16px);
+        flex-basis: calc(66.66667% - 16px); }
+      .cell[data-tablet-column='75'] {
+        max-width: calc(75% - 16px);
+        -ms-flex-preferred-size: calc(75% - 16px);
+        flex-basis: calc(75% - 16px); }
+      .cell[data-tablet-column='80'] {
+        max-width: calc(80% - 16px);
+        -ms-flex-preferred-size: calc(80% - 16px);
+        flex-basis: calc(80% - 16px); }
+      .cell[data-tablet-column='90'] {
+        max-width: calc(90% - 16px);
+        -ms-flex-preferred-size: calc(90% - 16px);
+        flex-basis: calc(90% - 16px); }
+      .cell[data-tablet-order='10'] {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .cell[data-tablet-order='20'] {
+        max-width: calc(20% - 16px);
+        -ms-flex-preferred-size: calc(20% - 16px);
+        flex-basis: calc(20% - 16px); }
+      .cell[data-tablet-order='25'] {
+        max-width: calc(25% - 16px);
+        -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px); }
+      .cell[data-tablet-order='33'] {
+        max-width: calc(33.33333% - 16px);
+        -ms-flex-preferred-size: calc(33.33333% - 16px);
+        flex-basis: calc(33.33333% - 16px); }
+      .cell[data-tablet-order='40'] {
+        max-width: calc(40% - 16px);
+        -ms-flex-preferred-size: calc(40% - 16px);
+        flex-basis: calc(40% - 16px); }
+      .cell[data-tablet-order='50'] {
+        max-width: calc(50% - 16px);
+        -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px); }
+      .cell[data-tablet-order='60'] {
+        max-width: calc(60% - 16px);
+        -ms-flex-preferred-size: calc(60% - 16px);
+        flex-basis: calc(60% - 16px); }
+      .cell[data-tablet-order='67'] {
+        max-width: calc(66.66667% - 16px);
+        -ms-flex-preferred-size: calc(66.66667% - 16px);
+        flex-basis: calc(66.66667% - 16px); }
+      .cell[data-tablet-order='75'] {
+        max-width: calc(75% - 16px);
+        -ms-flex-preferred-size: calc(75% - 16px);
+        flex-basis: calc(75% - 16px); }
+      .cell[data-tablet-order='80'] {
+        max-width: calc(80% - 16px);
+        -ms-flex-preferred-size: calc(80% - 16px);
+        flex-basis: calc(80% - 16px); }
+      .cell[data-tablet-order='90'] {
+        max-width: calc(90% - 16px);
+        -ms-flex-preferred-size: calc(90% - 16px);
+        flex-basis: calc(90% - 16px); }
+      .cell[data-offset-tablet='1'] {
+        margin-left: calc(1% + 16px); }
+      .cell[data-offset-tablet='2'] {
+        margin-left: calc(2% + 16px); }
+      .cell[data-offset-tablet='3'] {
+        margin-left: calc(3% + 16px); }
+      .cell[data-offset-tablet='4'] {
+        margin-left: calc(4% + 16px); }
+      .cell[data-offset-tablet='5'] {
+        margin-left: calc(5% + 16px); }
+      .cell[data-offset-tablet='6'] {
+        margin-left: calc(6% + 16px); }
+      .cell[data-offset-tablet='7'] {
+        margin-left: calc(7% + 16px); }
+      .cell[data-offset-tablet='8'] {
+        margin-left: calc(8% + 16px); }
+      .cell[data-offset-tablet='9'] {
+        margin-left: calc(9% + 16px); }
+      .grid[data-columns-tablet='1'] .cell {
+        max-width: calc(100% - 16px);
+        -ms-flex-preferred-size: calc(100% - 16px);
+        flex-basis: calc(100% - 16px); }
+      .grid[data-columns-tablet='2'] .cell {
+        max-width: calc(50% - 16px);
+        -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px); }
+      .grid[data-columns-tablet='3'] .cell {
+        max-width: calc(33.33333% - 16px);
+        -ms-flex-preferred-size: calc(33.33333% - 16px);
+        flex-basis: calc(33.33333% - 16px); }
+      .grid[data-columns-tablet='4'] .cell {
+        max-width: calc(25% - 16px);
+        -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px); }
+      .grid[data-columns-tablet='5'] .cell {
+        max-width: calc(20% - 16px);
+        -ms-flex-preferred-size: calc(20% - 16px);
+        flex-basis: calc(20% - 16px); }
+      .grid[data-columns-tablet='6'] .cell {
+        max-width: calc(16.66667% - 16px);
+        -ms-flex-preferred-size: calc(16.66667% - 16px);
+        flex-basis: calc(16.66667% - 16px); }
+      .grid[data-columns-tablet='7'] .cell {
+        max-width: calc(14.28571% - 16px);
+        -ms-flex-preferred-size: calc(14.28571% - 16px);
+        flex-basis: calc(14.28571% - 16px); }
+      .grid[data-columns-tablet='8'] .cell {
+        max-width: calc(12.5% - 16px);
+        -ms-flex-preferred-size: calc(12.5% - 16px);
+        flex-basis: calc(12.5% - 16px); } }
   @media (min-width: 960px) {
-    .cell[data-column-desktop='10'] {
-      flex-basis: calc(10% - 16px); }
-    .cell[data-column-desktop='20'] {
-      flex-basis: calc(20% - 16px); }
-    .cell[data-column-desktop='25'] {
+    .cell {
+      max-width: calc(25% - 16px);
+      -ms-flex-preferred-size: calc(25% - 16px);
       flex-basis: calc(25% - 16px); }
-    .cell[data-column-desktop='33'] {
-      flex-basis: calc(33.33333% - 16px); }
-    .cell[data-column-desktop='40'] {
-      flex-basis: calc(40% - 16px); }
-    .cell[data-column-desktop='50'] {
-      flex-basis: calc(50% - 16px); }
-    .cell[data-column-desktop='60'] {
-      flex-basis: calc(60% - 16px); }
-    .cell[data-column-desktop='67'] {
-      flex-basis: calc(66.66667% - 16px); }
-    .cell[data-column-desktop='75'] {
-      flex-basis: calc(75% - 16px); }
-    .cell[data-column-desktop='80'] {
-      flex-basis: calc(80% - 16px); }
-    .cell[data-column-desktop='90'] {
-      flex-basis: calc(90% - 16px); }
-    .cell[data-column-desktop='16px'] {
-      flex-basis: calc(100% - 16px); }
-    .cell[data-order-desktop='1'] {
-      order: 1; }
-    .cell[data-order-desktop='2'] {
-      order: 2; }
-    .cell[data-order-desktop='3'] {
-      order: 3; }
-    .cell[data-order-desktop='4'] {
-      order: 4; }
-    .cell[data-order-desktop='5'] {
-      order: 5; }
-    .cell[data-order-desktop='6'] {
-      order: 6; }
-    .cell[data-order-desktop='7'] {
-      order: 7; }
-    .cell[data-order-desktop='8'] {
-      order: 8; }
-    .cell[data-order-desktop='9'] {
-      order: 9; }
-    .cell[data-order-desktop='10'] {
-      order: 10; }
-    .cell[data-offset-desktop='1'] {
-      margin-left: calc(1% + 16px); }
-    .cell[data-offset-desktop='2'] {
-      margin-left: calc(2% + 16px); }
-    .cell[data-offset-desktop='3'] {
-      margin-left: calc(3% + 16px); }
-    .cell[data-offset-desktop='4'] {
-      margin-left: calc(4% + 16px); }
-    .cell[data-offset-desktop='5'] {
-      margin-left: calc(5% + 16px); }
-    .cell[data-offset-desktop='6'] {
-      margin-left: calc(6% + 16px); }
-    .cell[data-offset-desktop='7'] {
-      margin-left: calc(7% + 16px); }
-    .cell[data-offset-desktop='8'] {
-      margin-left: calc(8% + 16px); }
-    .cell[data-offset-desktop='9'] {
-      margin-left: calc(9% + 16px); }
-    .grid[data-columns-desktop='1'] .cell {
-      flex-basis: calc(10% - 16px); }
-    .grid[data-columns-desktop='2'] .cell {
-      flex-basis: calc(5% - 16px); }
-    .grid[data-columns-desktop='3'] .cell {
-      flex-basis: calc(3.33333% - 16px); }
-    .grid[data-columns-desktop='4'] .cell {
-      flex-basis: calc(2.5% - 16px); }
-    .grid[data-columns-desktop='5'] .cell {
-      flex-basis: calc(2% - 16px); }
-    .grid[data-columns-desktop='6'] .cell {
-      flex-basis: calc(1.66667% - 16px); }
-    .grid[data-columns-desktop='7'] .cell {
-      flex-basis: calc(1.42857% - 16px); }
-    .grid[data-columns-desktop='8'] .cell {
-      flex-basis: calc(1.25% - 16px); } }
+      .cell[data-desktop-column='10'] {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .cell[data-desktop-column='20'] {
+        max-width: calc(20% - 16px);
+        -ms-flex-preferred-size: calc(20% - 16px);
+        flex-basis: calc(20% - 16px); }
+      .cell[data-desktop-column='25'] {
+        max-width: calc(25% - 16px);
+        -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px); }
+      .cell[data-desktop-column='33'] {
+        max-width: calc(33.33333% - 16px);
+        -ms-flex-preferred-size: calc(33.33333% - 16px);
+        flex-basis: calc(33.33333% - 16px); }
+      .cell[data-desktop-column='40'] {
+        max-width: calc(40% - 16px);
+        -ms-flex-preferred-size: calc(40% - 16px);
+        flex-basis: calc(40% - 16px); }
+      .cell[data-desktop-column='50'] {
+        max-width: calc(50% - 16px);
+        -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px); }
+      .cell[data-desktop-column='60'] {
+        max-width: calc(60% - 16px);
+        -ms-flex-preferred-size: calc(60% - 16px);
+        flex-basis: calc(60% - 16px); }
+      .cell[data-desktop-column='67'] {
+        max-width: calc(66.66667% - 16px);
+        -ms-flex-preferred-size: calc(66.66667% - 16px);
+        flex-basis: calc(66.66667% - 16px); }
+      .cell[data-desktop-column='75'] {
+        max-width: calc(75% - 16px);
+        -ms-flex-preferred-size: calc(75% - 16px);
+        flex-basis: calc(75% - 16px); }
+      .cell[data-desktop-column='80'] {
+        max-width: calc(80% - 16px);
+        -ms-flex-preferred-size: calc(80% - 16px);
+        flex-basis: calc(80% - 16px); }
+      .cell[data-desktop-column='90'] {
+        max-width: calc(90% - 16px);
+        -ms-flex-preferred-size: calc(90% - 16px);
+        flex-basis: calc(90% - 16px); }
+      .cell[data-column-desktop='16px'] {
+        max-width: calc(100% - 16px);
+        -ms-flex-preferred-size: calc(100% - 16px);
+        flex-basis: calc(100% - 16px); }
+      .cell[data-order-desktop='1'] {
+        -ms-flex-order: 1;
+        order: 1; }
+      .cell[data-order-desktop='2'] {
+        -ms-flex-order: 2;
+        order: 2; }
+      .cell[data-order-desktop='3'] {
+        -ms-flex-order: 3;
+        order: 3; }
+      .cell[data-order-desktop='4'] {
+        -ms-flex-order: 4;
+        order: 4; }
+      .cell[data-order-desktop='5'] {
+        -ms-flex-order: 5;
+        order: 5; }
+      .cell[data-order-desktop='6'] {
+        -ms-flex-order: 6;
+        order: 6; }
+      .cell[data-order-desktop='7'] {
+        -ms-flex-order: 7;
+        order: 7; }
+      .cell[data-order-desktop='8'] {
+        -ms-flex-order: 8;
+        order: 8; }
+      .cell[data-order-desktop='9'] {
+        -ms-flex-order: 9;
+        order: 9; }
+      .cell[data-order-desktop='10'] {
+        -ms-flex-order: 10;
+        order: 10; }
+      .cell[data-offset-desktop='1'] {
+        margin-left: calc(1% + 16px); }
+      .cell[data-offset-desktop='2'] {
+        margin-left: calc(2% + 16px); }
+      .cell[data-offset-desktop='3'] {
+        margin-left: calc(3% + 16px); }
+      .cell[data-offset-desktop='4'] {
+        margin-left: calc(4% + 16px); }
+      .cell[data-offset-desktop='5'] {
+        margin-left: calc(5% + 16px); }
+      .cell[data-offset-desktop='6'] {
+        margin-left: calc(6% + 16px); }
+      .cell[data-offset-desktop='7'] {
+        margin-left: calc(7% + 16px); }
+      .cell[data-offset-desktop='8'] {
+        margin-left: calc(8% + 16px); }
+      .cell[data-offset-desktop='9'] {
+        margin-left: calc(9% + 16px); }
+      .grid[data-columns-desktop='1'] .cell {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .grid[data-columns-desktop='2'] .cell {
+        max-width: calc(5% - 16px);
+        -ms-flex-preferred-size: calc(5% - 16px);
+        flex-basis: calc(5% - 16px); }
+      .grid[data-columns-desktop='3'] .cell {
+        max-width: calc(3.33333% - 16px);
+        -ms-flex-preferred-size: calc(3.33333% - 16px);
+        flex-basis: calc(3.33333% - 16px); }
+      .grid[data-columns-desktop='4'] .cell {
+        max-width: calc(2.5% - 16px);
+        -ms-flex-preferred-size: calc(2.5% - 16px);
+        flex-basis: calc(2.5% - 16px); }
+      .grid[data-columns-desktop='5'] .cell {
+        max-width: calc(2% - 16px);
+        -ms-flex-preferred-size: calc(2% - 16px);
+        flex-basis: calc(2% - 16px); }
+      .grid[data-columns-desktop='6'] .cell {
+        max-width: calc(1.66667% - 16px);
+        -ms-flex-preferred-size: calc(1.66667% - 16px);
+        flex-basis: calc(1.66667% - 16px); }
+      .grid[data-columns-desktop='7'] .cell {
+        max-width: calc(1.42857% - 16px);
+        -ms-flex-preferred-size: calc(1.42857% - 16px);
+        flex-basis: calc(1.42857% - 16px); }
+      .grid[data-columns-desktop='8'] .cell {
+        max-width: calc(1.25% - 16px);
+        -ms-flex-preferred-size: calc(1.25% - 16px);
+        flex-basis: calc(1.25% - 16px); } }
   @media (min-width: 1280px) {
-    .cell[data-column-large-desktop='10'] {
-      flex-basis: calc(10% - 16px); }
-    .cell[data-column-large-desktop='20'] {
+    .cell {
+      max-width: calc(20% - 16px);
+      -ms-flex-preferred-size: calc(20% - 16px);
       flex-basis: calc(20% - 16px); }
-    .cell[data-column-large-desktop='25'] {
-      flex-basis: calc(25% - 16px); }
-    .cell[data-column-large-desktop='33'] {
-      flex-basis: calc(33.33333% - 16px); }
-    .cell[data-column-large-desktop='40'] {
-      flex-basis: calc(40% - 16px); }
-    .cell[data-column-large-desktop='50'] {
-      flex-basis: calc(50% - 16px); }
-    .cell[data-column-large-desktop='60'] {
-      flex-basis: calc(60% - 16px); }
-    .cell[data-column-large-desktop='67'] {
-      flex-basis: calc(66.66667% - 16px); }
-    .cell[data-column-large-desktop='75'] {
-      flex-basis: calc(75% - 16px); }
-    .cell[data-column-large-desktop='80'] {
-      flex-basis: calc(80% - 16px); }
-    .cell[data-column-large-desktop='90'] {
-      flex-basis: calc(90% - 16px); }
-    .cell[data-column-large-desktop='10'] {
-      flex-basis: calc(100% - 16px); }
-    .cell[data-order-large-desktop='1'] {
-      order: 1; }
-    .cell[data-order-large-desktop='2'] {
-      order: 2; }
-    .cell[data-order-large-desktop='3'] {
-      order: 3; }
-    .cell[data-order-large-desktop='4'] {
-      order: 4; }
-    .cell[data-order-large-desktop='5'] {
-      order: 5; }
-    .cell[data-order-large-desktop='6'] {
-      order: 6; }
-    .cell[data-order-large-desktop='7'] {
-      order: 7; }
-    .cell[data-order-large-desktop='8'] {
-      order: 8; }
-    .cell[data-order-large-desktop='9'] {
-      order: 9; }
-    .cell[data-order-large-desktop='10'] {
-      order: 10; }
-    .cell[data-offset-large-desktop='1'] {
-      margin-left: calc(1% + 16px); }
-    .cell[data-offset-large-desktop='2'] {
-      margin-left: calc(2% + 16px); }
-    .cell[data-offset-large-desktop='3'] {
-      margin-left: calc(3% + 16px); }
-    .cell[data-offset-large-desktop='4'] {
-      margin-left: calc(4% + 16px); }
-    .cell[data-offset-large-desktop='5'] {
-      margin-left: calc(5% + 16px); }
-    .cell[data-offset-large-desktop='6'] {
-      margin-left: calc(6% + 16px); }
-    .cell[data-offset-large-desktop='7'] {
-      margin-left: calc(7% + 16px); }
-    .cell[data-offset-large-desktop='8'] {
-      margin-left: calc(8% + 16px); }
-    .cell[data-offset-large-desktop='9'] {
-      margin-left: calc(9% + 16px); }
-    .grid[data-columns-large-desktop='1'] .cell {
-      flex-basis: calc(10% - 16px); }
-    .grid[data-columns-large-desktop='2'] .cell {
-      flex-basis: calc(5% - 16px); }
-    .grid[data-columns-large-desktop='3'] .cell {
-      flex-basis: calc(3.33333% - 16px); }
-    .grid[data-columns-large-desktop='4'] .cell {
-      flex-basis: calc(2.5% - 16px); }
-    .grid[data-columns-large-desktop='5'] .cell {
-      flex-basis: calc(2% - 16px); }
-    .grid[data-columns-large-desktop='6'] .cell {
-      flex-basis: calc(1.66667% - 16px); }
-    .grid[data-columns-large-desktop='7'] .cell {
-      flex-basis: calc(1.42857% - 16px); }
-    .grid[data-columns-large-desktop='8'] .cell {
-      flex-basis: calc(1.25% - 16px); } }
+      .cell[data-large-desktop-column='10'] {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .cell[data-large-desktop-column='20'] {
+        max-width: calc(20% - 16px);
+        -ms-flex-preferred-size: calc(20% - 16px);
+        flex-basis: calc(20% - 16px); }
+      .cell[data-large-desktop-column='25'] {
+        max-width: calc(25% - 16px);
+        -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px); }
+      .cell[data-large-desktop-column='33'] {
+        max-width: calc(33.33333% - 16px);
+        -ms-flex-preferred-size: calc(33.33333% - 16px);
+        flex-basis: calc(33.33333% - 16px); }
+      .cell[data-large-desktop-column='40'] {
+        max-width: calc(40% - 16px);
+        -ms-flex-preferred-size: calc(40% - 16px);
+        flex-basis: calc(40% - 16px); }
+      .cell[data-large-desktop-column='50'] {
+        max-width: calc(50% - 16px);
+        -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px); }
+      .cell[data-large-desktop-column='60'] {
+        max-width: calc(60% - 16px);
+        -ms-flex-preferred-size: calc(60% - 16px);
+        flex-basis: calc(60% - 16px); }
+      .cell[data-large-desktop-column='67'] {
+        max-width: calc(66.66667% - 16px);
+        -ms-flex-preferred-size: calc(66.66667% - 16px);
+        flex-basis: calc(66.66667% - 16px); }
+      .cell[data-large-desktop-column='75'] {
+        max-width: calc(75% - 16px);
+        -ms-flex-preferred-size: calc(75% - 16px);
+        flex-basis: calc(75% - 16px); }
+      .cell[data-large-desktop-column='80'] {
+        max-width: calc(80% - 16px);
+        -ms-flex-preferred-size: calc(80% - 16px);
+        flex-basis: calc(80% - 16px); }
+      .cell[data-large-desktop-column='90'] {
+        max-width: calc(90% - 16px);
+        -ms-flex-preferred-size: calc(90% - 16px);
+        flex-basis: calc(90% - 16px); }
+      .cell[data-column-large-desktop='10'] {
+        max-width: calc(100% - 16px);
+        -ms-flex-preferred-size: calc(100% - 16px);
+        flex-basis: calc(100% - 16px); }
+      .cell[data-order-large-desktop='1'] {
+        -ms-flex-order: 1;
+        order: 1; }
+      .cell[data-order-large-desktop='2'] {
+        -ms-flex-order: 2;
+        order: 2; }
+      .cell[data-order-large-desktop='3'] {
+        -ms-flex-order: 3;
+        order: 3; }
+      .cell[data-order-large-desktop='4'] {
+        -ms-flex-order: 4;
+        order: 4; }
+      .cell[data-order-large-desktop='5'] {
+        -ms-flex-order: 5;
+        order: 5; }
+      .cell[data-order-large-desktop='6'] {
+        -ms-flex-order: 6;
+        order: 6; }
+      .cell[data-order-large-desktop='7'] {
+        -ms-flex-order: 7;
+        order: 7; }
+      .cell[data-order-large-desktop='8'] {
+        -ms-flex-order: 8;
+        order: 8; }
+      .cell[data-order-large-desktop='9'] {
+        -ms-flex-order: 9;
+        order: 9; }
+      .cell[data-order-large-desktop='10'] {
+        -ms-flex-order: 10;
+        order: 10; }
+      .cell[data-offset-large-desktop='1'] {
+        margin-left: calc(1% + 16px); }
+      .cell[data-offset-large-desktop='2'] {
+        margin-left: calc(2% + 16px); }
+      .cell[data-offset-large-desktop='3'] {
+        margin-left: calc(3% + 16px); }
+      .cell[data-offset-large-desktop='4'] {
+        margin-left: calc(4% + 16px); }
+      .cell[data-offset-large-desktop='5'] {
+        margin-left: calc(5% + 16px); }
+      .cell[data-offset-large-desktop='6'] {
+        margin-left: calc(6% + 16px); }
+      .cell[data-offset-large-desktop='7'] {
+        margin-left: calc(7% + 16px); }
+      .cell[data-offset-large-desktop='8'] {
+        margin-left: calc(8% + 16px); }
+      .cell[data-offset-large-desktop='9'] {
+        margin-left: calc(9% + 16px); }
+      .grid[data-columns-large-desktop='1'] .cell {
+        max-width: calc(10% - 16px);
+        -ms-flex-preferred-size: calc(10% - 16px);
+        flex-basis: calc(10% - 16px); }
+      .grid[data-columns-large-desktop='2'] .cell {
+        max-width: calc(5% - 16px);
+        -ms-flex-preferred-size: calc(5% - 16px);
+        flex-basis: calc(5% - 16px); }
+      .grid[data-columns-large-desktop='3'] .cell {
+        max-width: calc(3.33333% - 16px);
+        -ms-flex-preferred-size: calc(3.33333% - 16px);
+        flex-basis: calc(3.33333% - 16px); }
+      .grid[data-columns-large-desktop='4'] .cell {
+        max-width: calc(2.5% - 16px);
+        -ms-flex-preferred-size: calc(2.5% - 16px);
+        flex-basis: calc(2.5% - 16px); }
+      .grid[data-columns-large-desktop='5'] .cell {
+        max-width: calc(2% - 16px);
+        -ms-flex-preferred-size: calc(2% - 16px);
+        flex-basis: calc(2% - 16px); }
+      .grid[data-columns-large-desktop='6'] .cell {
+        max-width: calc(1.66667% - 16px);
+        -ms-flex-preferred-size: calc(1.66667% - 16px);
+        flex-basis: calc(1.66667% - 16px); }
+      .grid[data-columns-large-desktop='7'] .cell {
+        max-width: calc(1.42857% - 16px);
+        -ms-flex-preferred-size: calc(1.42857% - 16px);
+        flex-basis: calc(1.42857% - 16px); }
+      .grid[data-columns-large-desktop='8'] .cell {
+        max-width: calc(1.25% - 16px);
+        -ms-flex-preferred-size: calc(1.25% - 16px);
+        flex-basis: calc(1.25% - 16px); } }
