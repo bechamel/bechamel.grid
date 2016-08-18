@@ -1,7 +1,7 @@
 // Grid
 //
 $grid-gutter: 16px !default;
-$grid-columns: 10 !default;
+$grid-max-columns: 10 !default;
 
 // $grid-columns: ( (10), '10', $screen_name);
 //   @include column( (20), '20', $screen_name);
@@ -27,7 +27,7 @@ $grid-large-desktop-breakpoint: 1280px !default;
 $grid-hd-desktop-breakpoint: 1600px !default;
 
 $grid-classname: 'grid' !default;
-$cell-classname: 'cell' !default;
+$column-classname: 'column' !default;
 
 // Container
 //

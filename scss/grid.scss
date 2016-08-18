@@ -11,31 +11,40 @@
   @include grid-gutter;
 
   // Herlper align classes
+  //
+  // Horizontal
   &[data-justify="left"] {
     justify-content: flex-start;
   }
-
   &[data-justify="right"] {
     justify-content: flex-end;
   }
-
   &[data-justify="center"] {
     justify-content: center;
   }
-
   &[data-justify="between"] {
     justify-content: space-between;
   }
-
   &[data-justify="around"] {
     justify-content: space-around;
+  }
+
+  // Vertical
+  &[data-align="top"] {
+    align-items: flex-start;
+  }
+  &[data-align="middle"] {
+    align-items: center;
+  }
+  &[data-align="bottom"] {
+    align-items: flex-end;
   }
 
 }
 
 
-// Cell styles and align classes
-.#{$cell-classname} {
+// Column styles and align classes
+.#{$column-classname} {
   box-sizing: border-box;
   flex-grow: 1;
   margin: $grid-gutter/2;
@@ -44,15 +53,12 @@
   &[data-align="top"] {
     align-self: flex-start;
   }
-
   &[data-align="middle"] {
     align-self: center;
   }
-
   &[data-align="bottom"] {
     align-self: flex-end;
   }
-
   &[data-align="stretch"] {
     align-self: stretch;
   }

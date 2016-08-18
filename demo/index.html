@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>Bechamel Grid - Demo</title>
+  <title>RockUI - Grid</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" >
   <link href="style.css" rel="stylesheet">
@@ -12,87 +12,113 @@
 <body>
 
   <header class="header  animated slideInDown">
-    <h1>Bechamel Grid</h1>
-    <h2>A semantic and responsive system grid.</h2>
+    <div class="container">
+      <h1>RockUI Grid</h1>
+      <h2>A semantic and responsive grid system.</h2>
 
-    <nav class="navigation">
-      <!-- <a href="#example" class="active">Example</a> -->
-      <div class="navigation--space"></div>
-      <a href="//github.com/bechamel/bechamel.grid" target="_blank">GitHub &raquo;</a>
-    </nav>
+      <nav class="navigation">
+        <!-- <a href="#example" class="active">Example</a> -->
+        <div class="navigation--space"></div>
+        <a href="//github.com/bechamel/bechamel.grid" target="_blank">GitHub &raquo;</a>
+      </nav>
+    </div>
   </header>
 
   <main class="main  animated slideInUp">
 
     <div class="page">
 
-      <div class="container_fluid"><h3>Different cell sizes</h3></div>
-      <div class="grid">
-        <div class="cell" data-column="10">10</div>
-        <div class="cell" data-column="90">90</div>
-        <div class="cell" data-column="20">20</div>
-        <div class="cell" data-column="80">80</div>
-        <div class="cell" data-column="25">25</div>
-        <div class="cell" data-column="75">75</div>
-        <div class="cell" data-column="33">33</div>
-        <div class="cell" data-column="67">67</div>
-        <div class="cell" data-column="40">40</div>
-        <div class="cell" data-column="60">60</div>
-        <div class="cell" data-column="50">50</div>
-        <div class="cell" data-column="50">50</div>
+      <div class="container">
+        <h3>Different cell sizes</h3>
+        <div class="grid">
+          <div class="column" data-column="10">10</div>
+          <div class="column" data-column="90">90</div>
+          <div class="column" data-column="20">20</div>
+          <div class="column" data-column="80">80</div>
+          <div class="column" data-column="25">25</div>
+          <div class="column" data-column="75">75</div>
+          <div class="column" data-column="33">33</div>
+          <div class="column" data-column="66">66</div>
+          <div class="column" data-column="40">40</div>
+          <div class="column" data-column="60">60</div>
+          <div class="column" data-column="50">50</div>
+          <div class="column" data-column="50">50</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Custom cell sizes for breakpoints</h3></div>
-      <div class="grid">
-        <div class="cell" data-column-tablet="60" data-column-desktop="40">6 tablet, 4 desktop</div>
-        <div class="cell" data-column-tablet="40" data-column-desktop="60">4 tablet, 6 desktop</div>
+      <div class="container">
+        <h3>Offset width</h3>
+        <div class="grid">
+          <div class="column" data-column="33">33</div>
+          <div class="column" data-column="33" data-offset="33">Offset 33</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Fixed cell sizes for breakpoints</h3></div>
-      <div class="grid" data-columns="3" data-columns-tablet="6">
-        <div class="cell">3 (6 tablet)</div>
-        <div class="cell">3 (6 tablet)</div>
-        <div class="cell">3 (6 tablet)</div>
-        <div class="cell">3 (6 tablet)</div>
-        <div class="cell">3 (6 tablet)</div>
-        <div class="cell">3 (6 tablet)</div>
+      <div class="container">
+        <h3>Custom cell sizes for breakpoints</h3>
+        <div class="grid">
+          <div class="column" data-column-tablet="60" data-column-desktop="40">60 tablet, 40 desktop</div>
+          <div class="column" data-column-tablet="40" data-column-desktop="60">40 tablet, 60 desktop</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Grid default</h3></div>
-      <div class="grid">
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
+      <div class="container">
+        <h3>Fixed cell sizes for breakpoints</h3>
+        <div class="grid" data-columns="3" data-columns-tablet="6">
+          <div class="column">3 (6 tablet)</div>
+          <div class="column">3 (6 tablet)</div>
+          <div class="column">3 (6 tablet)</div>
+          <div class="column">3 (6 tablet)</div>
+          <div class="column">3 (6 tablet)</div>
+          <div class="column">3 (6 tablet)</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Grid justify center</h3></div>
-      <div class="grid" data-justify="center">
-        <div class="cell" data-column="30">default</div>
-        <div class="cell" data-column="30">default</div>
-        <div class="cell" data-column="30">default</div>
+      <div class="container">
+        <h3>Grid default</h3>
+        <div class="grid">
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Grid justify right</h3></div>
-      <div class="grid" data-justify="right">
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
+      <div class="container">
+        <h3>Grid justify center</h3>
+        <div class="grid" data-justify="center">
+          <div class="column" data-column="30">default</div>
+          <div class="column" data-column="30">default</div>
+          <div class="column" data-column="30">default</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Grid justify between</h3></div>
-      <div class="grid" data-justify="between">
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
+      <div class="container">
+        <h3>Grid justify right</h3>
+        <div class="grid" data-justify="right">
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+        </div>
       </div>
 
-      <div class="container_fluid"><h3>Grid justify around</h3></div>
-      <div class="grid" data-justify="around">
-        <div class="cell">default</div>
-        <div class="cell">default</div>
-        <div class="cell">default</div>
+      <div class="container">
+        <h3>Grid justify between</h3>
+        <div class="grid" data-justify="between">
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h3>Grid justify around</h3>
+        <div class="grid" data-justify="around">
+          <div class="column">default</div>
+          <div class="column">default</div>
+          <div class="column">default</div>
+        </div>
       </div>
 
     </div>
@@ -100,7 +126,9 @@
   </main>
 
   <footer class="footer">
-    Build with ❤ by <a href="//github.com/bechamel">bechamel</a>
+    <div class="container">
+    Build with <span class="love">❤</span> by <a href="//github.com/rockui">RockUI</a>
+    </div>
   </footer>
 
 </body>

@@ -29,14 +29,14 @@
   @include container-gutter;
 }
 
-.container_fluid {
-  @extend %container;
-}
-
 .container {
   @extend %container;
   @extend %container__center;
   @extend %container__breakpoints;
+
+  &[data-type=fluid] {
+    max-width: none;
+  }
 }
 
 // Text container
