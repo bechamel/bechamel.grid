@@ -67,8 +67,8 @@ body {
 }
 
 h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   line-height: 2rem;
   font-size: 1.5rem;
   font-weight: 300;
@@ -83,19 +83,19 @@ a {
 
 .column div {
   padding: 1rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 
 .footer {
   padding: 1rem 0;
-  color: rgba(255, 255, 255, 0.8);
-  // background: hsl(200,5%,40%);
-  background: #222;
+  color: rgba(0,0,0,0.4);
+  font-size: 14px;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(0,0,0,0.1)
 }
 
 .footer .love {
