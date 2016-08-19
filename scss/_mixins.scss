@@ -10,19 +10,19 @@
 
   .container & {
     padding: 0;
-    margin: 0 (-$grid-gutter/2);
+    margin: -$gutter/2;
   }
 }
 
 // Offset calculation
-@mixin offset-size($size, $gutter: $grid-gutter) {
-  margin-left: calc(#{$size+"%"} + #{$gutter/2});
+@mixin offset-size($size) {
+  margin-left: #{$size+"%"};
 }
 
 // Width calculation
-@mixin column-size($size, $gutter: $grid-gutter) {
-  max-width: calc(#{$size+'%'} - #{$gutter});
-  flex-basis: calc(#{$size+'%'} - #{$gutter});
+@mixin column-size($size) {
+  max-width: #{$size+'%'};
+  flex-basis: #{$size+'%'};
 }
 
 // Create columns attributes modifiers
@@ -49,10 +49,6 @@
   @include column( (75), '75', $attribute, $screen_name);
   @include column( (80), '80', $attribute, $screen_name);
   @include column( (90), '90', $attribute, $screen_name);
-}
-
-@mixin full-size($gutter: $grid-gutter) {
-  @include column-size(100, $gutter);
 }
 
 
@@ -143,7 +139,7 @@
     // Fixed cell sizes for desktop
     @for $i from 1 through 8 {
       .#{$grid-classname}[data-columns-desktop='#{$i}'] & {
-        @include column-size(10 / $i);
+        @include column-size(100 / $i);
       }
     }
 
@@ -175,7 +171,7 @@
     // Fixed cell sizes for large desktop
     @for $i from 1 through 8 {
       .#{$grid-classname}[data-columns-large-desktop='#{$i}'] & {
-        @include column-size(10 / $i);
+        @include column-size(100 / $i);
       }
     }
 

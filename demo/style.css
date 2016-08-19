@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   font: 16px/1.5 "Roboto", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.05);
@@ -8,8 +7,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  // align-content: flex-start;
-  height: 100%;
   margin: 0;
 }
 
@@ -39,7 +36,6 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
 }
 
 .navigation a {
@@ -67,7 +63,7 @@ body {
 
 .page {
   padding-top: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 h3 {
@@ -85,7 +81,7 @@ a {
   transition: color 300ms ease-out;
 }
 
-.column {
+.column div {
   padding: 1rem;
   color: rgba(0, 0, 0, 0.6);
   background: rgba(0, 0, 0, 0.05);

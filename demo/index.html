@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>RockUI - Grid</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" >
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" > -->
   <link href="../dist/css/grid.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
@@ -17,113 +17,123 @@
       <h2>A semantic and responsive grid system.</h2>
 
       <nav class="navigation">
-        <!-- <a href="#example" class="active">Example</a> -->
         <div class="navigation--space"></div>
         <a href="//github.com/rockui-org/rockui.grid" target="_blank">GitHub &raquo;</a>
       </nav>
     </div>
   </header>
 
-  <main class="main  animated slideInUp">
+
+  <main class="main  animated fadeIn">
 
     <div class="page">
 
       <div class="container">
         <h3>Different cell sizes</h3>
         <div class="grid">
-          <div class="column" data-column="10">10</div>
-          <div class="column" data-column="90">90</div>
-          <div class="column" data-column="20">20</div>
-          <div class="column" data-column="80">80</div>
-          <div class="column" data-column="25">25</div>
-          <div class="column" data-column="75">75</div>
-          <div class="column" data-column="33">33</div>
-          <div class="column" data-column="66">66</div>
-          <div class="column" data-column="40">40</div>
-          <div class="column" data-column="60">60</div>
-          <div class="column" data-column="50">50</div>
-          <div class="column" data-column="50">50</div>
+          <div class="column" data-column="10"><div>10</div></div>
+          <div class="column" data-column="90"><div>90</div></div>
+          <div class="column" data-column="20"><div>20</div></div>
+          <div class="column" data-column="80"><div>80</div></div>
+          <div class="column" data-column="25"><div>25</div></div>
+          <div class="column" data-column="75"><div>75</div></div>
+          <div class="column" data-column="33"><div>33</div></div>
+          <div class="column" data-column="66"><div>66</div></div>
+          <div class="column" data-column="40"><div>40</div></div>
+          <div class="column" data-column="60"><div>60</div></div>
+          <div class="column" data-column="50"><div>50</div></div>
+          <div class="column" data-column="50"><div>50</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Offset width</h3>
         <div class="grid">
-          <div class="column" data-column="33">33</div>
-          <div class="column" data-column="33" data-offset="33">Offset 33</div>
+          <div class="column" data-column="33"><div>33</div></div>
+          <div class="column" data-column="33" data-offset="33"><div>Offset 33</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Custom cell sizes for breakpoints</h3>
         <div class="grid">
-          <div class="column" data-column-tablet="60" data-column-desktop="40">60 tablet, 40 desktop</div>
-          <div class="column" data-column-tablet="40" data-column-desktop="60">40 tablet, 60 desktop</div>
+          <div class="column" data-column-tablet="60" data-column-desktop="40"><div>60 tablet, 40 desktop</div></div>
+          <div class="column" data-column-tablet="40" data-column-desktop="60"><div>40 tablet, 60 desktop</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Fixed cell sizes for breakpoints</h3>
         <div class="grid" data-columns="3" data-columns-tablet="6">
-          <div class="column">3 (6 tablet)</div>
-          <div class="column">3 (6 tablet)</div>
-          <div class="column">3 (6 tablet)</div>
-          <div class="column">3 (6 tablet)</div>
-          <div class="column">3 (6 tablet)</div>
-          <div class="column">3 (6 tablet)</div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Grid default</h3>
         <div class="grid">
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Grid justify center</h3>
         <div class="grid" data-justify="center">
-          <div class="column" data-column="30">default</div>
-          <div class="column" data-column="30">default</div>
-          <div class="column" data-column="30">default</div>
+          <div class="column" data-column="30"><div>default</div></div>
+          <div class="column" data-column="30"><div>default</div></div>
+          <div class="column" data-column="30"><div>default</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Grid justify right</h3>
         <div class="grid" data-justify="right">
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Grid justify between</h3>
         <div class="grid" data-justify="between">
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
         </div>
       </div>
 
       <div class="container">
         <h3>Grid justify around</h3>
         <div class="grid" data-justify="around">
-          <div class="column">default</div>
-          <div class="column">default</div>
-          <div class="column">default</div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+        </div>
+      </div>
+
+      <div class="container dynamic_gutter">
+        <h3>Dynamic grid gutter</h3>
+        <div class="grid">
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
         </div>
       </div>
 
     </div>
 
   </main>
+
 
   <footer class="footer">
     <div class="container">

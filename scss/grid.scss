@@ -47,7 +47,19 @@
 .#{$column-classname} {
   box-sizing: border-box;
   flex-grow: 1;
-  margin: $grid-gutter/2;
+  padding: $grid-gutter/2;
+
+  // Generate phone columns
+  @include phone_columns();
+
+  // Generate tablet columns
+  @include tablet_columns();
+
+  // Generate desktop columns
+  @include desktop_columns();
+
+  // Generate large desktop columns
+  @include large_desktop_columns();
 
   // Helper align classes
   &[data-align="top"] {
@@ -62,17 +74,5 @@
   &[data-align="stretch"] {
     align-self: stretch;
   }
-
-  // Generate phone columns
-  @include phone_columns();
-
-  // Generate tablet columns
-  @include tablet_columns();
-
-  // Generate desktop columns
-  @include desktop_columns();
-
-  // Generate large desktop columns
-  @include large_desktop_columns();
 
 }
