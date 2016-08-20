@@ -4,27 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>RockUI - Grid</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" > -->
+  <meta name="description" content="A semantic and responsive flexbox grid system.">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <link href="../dist/css/grid.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-  <header class="header  animated slideInDown">
+  <header class="header">
     <div class="container">
-      <h1>RockUI Grid</h1>
-      <h2>A semantic and responsive grid system.</h2>
+      <h1><strong>RockUI</strong> Grid</h1>
+      <h2>A semantic and responsive flexbox grid system.</h2>
 
       <nav class="navigation">
         <div class="navigation--space"></div>
-        <a href="//github.com/rockui-org/rockui.grid" target="_blank">GitHub &raquo;</a>
+        <a class="button" href="//github.com/rock-ui/rockui.grid" title="View project on GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
       </nav>
     </div>
   </header>
 
 
-  <main class="main  animated fadeIn">
+  <main class="main">
 
     <div class="page">
 
@@ -87,7 +89,7 @@
 
       <div class="container">
         <h3>Grid justify center</h3>
-        <div class="grid" data-justify="center">
+        <div class="grid" data-justify-content="center">
           <div class="column" data-column="30"><div>default</div></div>
           <div class="column" data-column="30"><div>default</div></div>
           <div class="column" data-column="30"><div>default</div></div>
@@ -96,7 +98,7 @@
 
       <div class="container">
         <h3>Grid justify right</h3>
-        <div class="grid" data-justify="right">
+        <div class="grid" data-justify-content="flex-end">
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
@@ -105,7 +107,7 @@
 
       <div class="container">
         <h3>Grid justify between</h3>
-        <div class="grid" data-justify="between">
+        <div class="grid" data-justify-content="space-between">
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
@@ -114,7 +116,7 @@
 
       <div class="container">
         <h3>Grid justify around</h3>
-        <div class="grid" data-justify="around">
+        <div class="grid" data-justify-content="space-around">
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
           <div class="column"><div>default</div></div>
@@ -128,7 +130,7 @@
 
   <footer class="footer">
     <div class="container">
-    Build with <span class="love">❤</span> by <a href="//github.com/rockui-org" target="_blank">RockUI</a>
+    Build with <span class="love">❤</span> by <a href="//github.com/rock-ui" target="_blank">RockUI</a>
     </div>
   </footer>
 

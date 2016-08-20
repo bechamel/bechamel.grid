@@ -34,21 +34,21 @@
   .container .grid {
     padding: 0;
     margin: -8px; }
-  .grid[data-justify="left"] {
+  .grid[data-justify-content="flex-start"] {
     justify-content: flex-start; }
-  .grid[data-justify="right"] {
+  .grid[data-justify-content="flex-end"] {
     justify-content: flex-end; }
-  .grid[data-justify="center"] {
+  .grid[data-justify-content="center"] {
     justify-content: center; }
-  .grid[data-justify="between"] {
+  .grid[data-justify-content="space-between"] {
     justify-content: space-between; }
-  .grid[data-justify="around"] {
+  .grid[data-justify-content="space-around"] {
     justify-content: space-around; }
-  .grid[data-align="top"] {
+  .grid[data-align-items="flex-start"] {
     align-items: flex-start; }
-  .grid[data-align="middle"] {
+  .grid[data-align-items="center"] {
     align-items: center; }
-  .grid[data-align="bottom"] {
+  .grid[data-align-items="flex-end"] {
     align-items: flex-end; }
 
 .column {
@@ -468,11 +468,11 @@
       .grid[data-columns-large-desktop='8'] .column {
         max-width: 12.5%;
         flex-basis: 12.5%; } }
-  .column[data-align="top"] {
+  .column[data-align-self="flex-start"] {
     align-self: flex-start; }
-  .column[data-align="middle"] {
+  .column[data-align-self="center"] {
     align-self: center; }
-  .column[data-align="bottom"] {
+  .column[data-align-self="flex-end"] {
     align-self: flex-end; }
-  .column[data-align="stretch"] {
+  .column[data-align-self="stretch"] {
     align-self: stretch; }

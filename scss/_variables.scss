@@ -3,18 +3,6 @@
 $grid-gutter: 16px !default;
 $grid-max-columns: 10 !default;
 
-// $grid-columns: ( (10), '10', $screen_name);
-//   @include column( (20), '20', $screen_name);
-//   @include column( (25), '25', $screen_name);
-//   @include column( (100/3), '33', $screen_name);
-//   @include column( (40), '40', $screen_name);
-//   @include column( (50), '50', $screen_name);
-//   @include column( (60), '60', $screen_name);
-//   @include column( (2/3*100), '67', $screen_name);
-//   @include column( (75), '75', $screen_name);
-//   @include column( (80), '80', $screen_name);
-//   @include column( (90), '90', $screen_name);
-
 $grid-tablet-namespace: 'tablet';
 $grid-desktop-namespace: 'desktop';
 $grid-large-desktop-namespace: 'large-desktop';

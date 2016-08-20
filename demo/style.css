@@ -10,9 +10,38 @@ body {
   margin: 0;
 }
 
+h1, h2 {
+  font-family: "Roboto Condensed";
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+  transition: color 300ms ease-out;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+@media(min-width:640px){
+  .container {
+    padding: 0 32px;
+  }
+}
+
 .header {
   color: white;
-  background: hsl(200,100%,40%);
+  background: hsl(200,100%,45%);
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 3px inset,
               rgba(0, 0, 0, 0.4) 0 1px 3px;
 }
@@ -39,6 +68,8 @@ body {
 }
 
 .navigation a {
+  display: flex;
+  align-items: center;
   padding: 1rem;
   font-size: 14px;
   font-weight: 500;
@@ -58,27 +89,16 @@ body {
   flex-grow: 1;
 }
 
+.navigation a i {
+  font-size: 32px !important;
+}
+
 .main {
 }
 
 .page {
   padding-top: 1rem;
   padding-bottom: 6rem;
-}
-
-h3 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: rgba(0,0,0,0.6);
-}
-
-a {
-  color:inherit;
-  text-decoration: none;
-  transition: color 300ms ease-out;
 }
 
 .column div {
@@ -92,10 +112,16 @@ a {
 .footer {
   padding: 1rem 0;
   color: rgba(0,0,0,0.4);
-  font-size: 14px;
+  // font-size: 14px;
   text-align: center;
   letter-spacing: 1px;
-  border-top: 1px solid rgba(0,0,0,0.1)
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background: #fff;
+  font-family: Roboto Condensed;
+}
+
+.footer a {
+  font-weight: 700;
 }
 
 .footer .love {
