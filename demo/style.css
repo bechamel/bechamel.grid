@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   font: 16px/1.5 "Roboto", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.8);
   background: rgba(0, 0, 0, 0.05);
@@ -7,16 +6,42 @@ html {
 
 body {
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  height: 100%;
+  flex-direction: column;
   margin: 0;
 }
 
+h1, h2 {
+  font-family: "Roboto Condensed";
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+  transition: color 300ms ease-out;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+@media(min-width:640px){
+  .container {
+    padding: 0 32px;
+  }
+}
+
 .header {
-  width: 100%;
   color: white;
-  background: hsl(200,100%,40%);
+  background: hsl(200,100%,45%);
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 3px inset,
               rgba(0, 0, 0, 0.4) 0 1px 3px;
 }
@@ -40,10 +65,11 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
 }
 
 .navigation a {
+  display: flex;
+  align-items: center;
   padding: 1rem;
   font-size: 14px;
   font-weight: 500;
@@ -63,44 +89,39 @@ body {
   flex-grow: 1;
 }
 
+.navigation a i {
+  font-size: 32px !important;
+}
+
 .main {
-  width: 100%;
 }
 
 .page {
-  width: 100%;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
 }
 
-h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: rgba(0,0,0,0.6);
-}
-
-a {
-  color:inherit;
-  transition: color 300ms ease-out;
-}
-
-.box {
+.column div {
   padding: 1rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 
 .footer {
-  width: 100%;
-  padding: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  background: hsl(200,10%,40%);
-  font-size: 14px;
+  padding: 1rem 0;
+  color: rgba(0,0,0,0.4);
+  // font-size: 14px;
   text-align: center;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background: #fff;
+  font-family: Roboto Condensed;
+}
+
+.footer a {
+  font-weight: 700;
 }
 
 .footer .love {

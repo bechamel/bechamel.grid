@@ -1,18 +1,3 @@
-// Fluid container
-//
-// Utilizes the mixin meant for fixed width containers, but without any defined
-// width for fluid, full width layouts.
-
-%container_fluid {
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.container_fluid {
-  @extend %container_fluid;
-  @include container;
-}
-
 // Container fixed width
 //
 %container__breakpoints {
@@ -27,17 +12,31 @@
   }
 }
 
-%container {
-  @extend %container_fluid;
+%container__center {
   margin-left: auto;
   margin-right: auto;
-  @extend %container__breakpoints;
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+%container {
+  box-sizing: border-box;
+  width: 100%;
+  @include container-gutter;
 }
 
 .container {
-  @extend %container_fluid;
   @extend %container;
-  @include container;
+  @extend %container__center;
+  @extend %container__breakpoints;
+
+  &[data-type=fluid] {
+    max-width: 0;
+  }
 }
 
 // Text container
@@ -45,6 +44,5 @@
 // Used to texts containers
 .text_container {
   max-width: $text-container-max-width;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %container__center;
 }

@@ -1,76 +1,83 @@
-// Create container
-@mixin container( $padding: $container-padding ) {
+// Mixins
+//
+@mixin container-gutter($padding: $container-padding) {
   padding-left: $padding;
   padding-right: $padding;
 }
 
-// Mixins for width calculation.
-@mixin partial-size($size, $columns, $gutter) {
-  width: calc(#{(($size / $columns) * 100)+"%"} - #{$gutter});
-}
+@mixin grid-gutter($gutter: $grid-gutter) {
+  padding: $gutter/2;
 
-@mixin full-size($gutter) {
-  @include partial-size(1, 1, $gutter);
-}
-
-@mixin grid($gutter: $grid-gutter){
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  margin: -($gutter / 2);
-
-  & + & {
-    padding-top: ($gutter / 2);
+  .container & {
+    padding: 0;
+    margin: -$gutter/2;
   }
 }
 
-@mixin cell( $gutter: $grid-gutter ) {
-  box-sizing: border-box;
-  margin: $gutter / 2;
+// Offset calculation
+@mixin offset-size($size) {
+  margin-left: #{$size+"%"};
 }
 
-// @mixin offset-size($size, $columns, $gutter) {
-//   margin-left: calc(#{(($size / $columns) * 100)+"%"} + #{$gutter / 2});
+// Width calculation
+@mixin column-size($size) {
+  max-width: #{$size+'%'};
+  flex-basis: #{$size+'%'};
+}
 
-//   .mdl-grid.mdl-grid--no-spacing > & {
-//     margin-left: #{(($size / $columns) * 100)+"%"};
-//   }
-// }
+// Create columns attributes modifiers
+@mixin column($size, $size_name, $attribute: '-column', $screen_name: '') {
+  &[data#{$attribute}#{$screen_name}='#{$size_name}'] {
+    @if $attribute == '-column' {
+      @include column-size($size);
+    }
+    @else if $attribute == '-offset' {
+      @include offset-size($size);
+    }
+  }
+}
 
+@mixin columns($attribute: '-column', $screen_name: '') {
+  @include column( (10), '10', $attribute, $screen_name);
+  @include column( (20), '20', $attribute, $screen_name);
+  @include column( (25), '25', $attribute, $screen_name);
+  @include column( (100/3), '33', $attribute, $screen_name);
+  @include column( (40), '40', $attribute, $screen_name);
+  @include column( (50), '50', $attribute, $screen_name);
+  @include column( (60), '60', $attribute, $screen_name);
+  @include column( (2/3*100), '66', $attribute, $screen_name);
+  @include column( (75), '75', $attribute, $screen_name);
+  @include column( (80), '80', $attribute, $screen_name);
+  @include column( (90), '90', $attribute, $screen_name);
+}
 
 
 //  Generate phone columns
 //
 @mixin phone_columns () {
 
-  // Define partial sizes for columnNumber < totalColumns.
-  @for $i from 1 through ($grid-columns - 1) {
-    &__#{$i} {
-      @include partial-size($i, $grid-columns, $grid-gutter);
-    }
-  }
+  // 1 column default on phone
+  @include column-size(100);
 
-  // Define 100% for everything else.
-  @for $i from $grid-columns through $grid-max-columns {
-    &__#{$i} {
-      @include full-size($grid-gutter);
-    }
-  }
+  // Define columns
+  @include columns;
 
   // Define order override classes.
   @for $i from 1 through $grid-max-columns {
-    &__order__#{$i} {
+    &[data-order='#{$i}'] {
       order: $i;
     }
   }
 
   // Define valid phone offsets.
-  // @for $i from 1 through ($grid-phone-columns - 1) {
-  //   .col--#{$i}-offset,
-  //   .col--#{$i}-offset-phone.col--#{$i}-offset-phone {
-  //     @include offset-size($i, $grid-phone-columns, $grid-phone-gutter);
-  //   }
-  // }
+  @include columns($attribute:'-offset');
+
+  // Fixed cell sizes
+  @for $i from 1 through 8 {
+    .#{$grid-classname}[data-columns='#{$i}'] & {
+      @include column-size(100 / $i);
+    }
+  }
 }
 
 
@@ -79,76 +86,62 @@
 @mixin tablet_columns () {
   @media (min-width: $grid-tablet-breakpoint) {
 
-    // Define partial sizes for columnNumber < totalColumns.
-    @for $i from 1 through ($grid-tablet-columns - 1) {
-      &__#{$i},
-      &__#{$i}__sm {
-        @include partial-size($i, $grid-tablet-columns, $grid-gutter);
-      }
-    }
+    // 2 columns default on tablet
+    @include column-size(100/2);
 
-    // Define 100% for everything else.
-    @for $i from $grid-tablet-columns through $grid-max-columns {
-      &__#{$i},
-      &__#{$i}__sm {
-        @include full-size($grid-gutter);
-      }
-    }
+    // Define partial sizes for columnNumber < totalColumns.
+    @include columns($screen_name:'-tablet');
+    @include column($size: 100, $size_name: '100', $attribute: '-column', $screen_name:'-tablet');
 
     // Define order override classes.
+    // @include columns('-order','-tablet');
     @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__sm {
+      &[data-order-tablet='#{$i}'] {
         order: $i;
       }
     }
 
     // Define valid tablet offsets.
-    // @for $i from 1 through ($grid-tablet-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-tablet.col--#{$i}-offset-tablet {
-    //     @include offset-size($i, $grid-tablet-columns, $grid-tablet-gutter);
-    //   }
-    // }
+    @include columns($attribute:'-offset',$screen_name:'-tablet');
+
+    // Fixed cell sizes for tablets
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-tablet='#{$i}'] & {
+        @include column-size(100 / $i);
+      }
+    }
 
   }
 }
 
 
-//  Generate desktop columns
+// Generate desktop columns
 //
 @mixin desktop_columns () {
   @media (min-width: $grid-desktop-breakpoint) {
 
-    // Define partial sizes for all numbers of columns.
-    @for $i from 1 through ($grid-desktop-columns - 1) {
-      &__#{$i},
-      &__#{$i}__md {
-        @include partial-size($i, $grid-desktop-columns, $grid-gutter);
-      }
-    }
+    // 4 columns default on desktop
+    @include column-size(100/4);
 
-    // Define 100% for everything else.
-    @for $i from $grid-desktop-columns through $grid-max-columns {
-      &__#{$i},
-      &__#{$i}__md {
-        @include full-size($grid-gutter);
-      }
-    }
+    // Define partial sizes for all numbers of columns.
+    @include columns($screen_name:'-desktop');
 
     // Define order override classes.
     @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__md {
+      &[data-order-desktop='#{$i}'] {
         order: $i;
       }
     }
 
     // Define valid desktop offsets.
-    // @for $i from 1 through ($grid-desktop-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-desktop {
-    //     @include offset-size($i, $grid-desktop-columns, $grid-desktop-gutter);
-    //   }
-    // }
+    @include columns($attribute:'-offset',$screen_name:'-desktop');
+
+    // Fixed cell sizes for desktop
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-desktop='#{$i}'] & {
+        @include column-size(100 / $i);
+      }
+    }
 
   }
 }
@@ -159,36 +152,28 @@
 @mixin large_desktop_columns () {
   @media (min-width: $grid-large-desktop-breakpoint) {
 
-    // Define partial sizes for all numbers of columns.
-    @for $i from 1 through ($grid-large-desktop-columns - 1) {
-      &__#{$i},
-      &__#{$i}__lg {
-        @include partial-size($i, $grid-large-desktop-columns, $grid-gutter);
-      }
-    }
+    // 5 columns default on large desktop
+    @include column-size(100/5);
 
-    // Define 100% for everything else.
-    @for $i from $grid-large-desktop-columns through $grid-max-columns {
-      &__#{$i},
-      &__#{$i}__lg {
-        @include full-size($grid-gutter);
-      }
-    }
+    // Define partial sizes for all numbers of columns.
+    @include columns($screen_name:'-large-desktop');
 
     // Define order override classes.
     @for $i from 1 through $grid-max-columns {
-      &__order__#{$i}__lg {
+      &[data-order-large-desktop='#{$i}'] {
         order: $i;
       }
     }
 
-    // Define valid desktop offsets.
-    // @for $i from 1 through ($grid-large-desktop-columns - 1) {
-    //   .col--#{$i}-offset,
-    //   .col--#{$i}-offset-large-desktop.col--#{$i}-offset-large-desktop {
-    //     @include offset-size($i, $grid-large-desktop-columns, $grid-large-desktop-gutter);
-    //   }
-    // }
+    // Define valid large desktop offsets.
+    @include columns($attribute:'-offset',$screen_name:'-large-desktop');
+
+    // Fixed cell sizes for large desktop
+    @for $i from 1 through 8 {
+      .#{$grid-classname}[data-columns-large-desktop='#{$i}'] & {
+        @include column-size(100 / $i);
+      }
+    }
 
   }
 }
