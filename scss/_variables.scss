@@ -1,13 +1,12 @@
 // Grid
 //
-$grid-gutter: 24px !default;
+$grid-gutter: 16px !default;
+$grid-max-columns: 10 !default;
 
-$grid-columns: 4 !default;
-$grid-tablet-columns: 8 !default;
-$grid-desktop-columns: 12 !default;
-$grid-large-desktop-columns: 16 !default;
-
-$grid-max-columns: $grid-large-desktop-columns !default;
+$grid-tablet-namespace: 'tablet';
+$grid-desktop-namespace: 'desktop';
+$grid-large-desktop-namespace: 'large-desktop';
+$grid-hd-desktop-namespace: 'hd-desktop';
 
 $grid-large-phone-breakpoint: 480px !default;
 $grid-tablet-breakpoint: 640px !default;
@@ -16,7 +15,7 @@ $grid-large-desktop-breakpoint: 1280px !default;
 $grid-hd-desktop-breakpoint: 1600px !default;
 
 $grid-classname: 'grid' !default;
-$cell-classname: 'cell' !default;
+$column-classname: 'column' !default;
 
 // Container
 //

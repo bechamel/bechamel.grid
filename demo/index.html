@@ -1,138 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Bechamel Grid - Demo</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" >
-	<link href="style.css" rel="stylesheet">
-	<link href="../dist/css/grid.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>RockUI - Grid</title>
+  <meta name="description" content="A semantic and responsive flexbox grid system.">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../dist/css/grid.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-	<header class="header  animated slideInDown">
-		<div class="container">
-			<h1>Flexbox Grid</h1>
-			<h2>A semantic and responsive system grid.</h2>
+  <header class="header">
+    <div class="container">
+      <h1><strong>RockUI</strong> Grid</h1>
+      <h2>A semantic and responsive flexbox grid system.</h2>
 
-			<nav class="navigation">
-				<!-- <a href="#example" class="active">Example</a> -->
-				<div class="navigation--space"></div>
-				<a href="//github.com/bechamel/bechamel.grid" target="_blank" title="View project on GitHub">GitHub &raquo;</a>
-			</nav>
-		</div>
-	</header>
+      <nav class="navigation">
+        <div class="navigation--space"></div>
+        <a class="button" href="//github.com/rock-ui/rockui.grid" title="View project on GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+  </header>
 
-	<main class="main  animated slideInUp">
 
-		<div class="page">
+  <main class="main">
 
-			<div class="container">
+    <div class="page">
 
-				<section>
-					<h3>Basic grid</h3>
-					<div class="grid">
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-						<div class="cell cell__1"><div class="box">1</div></div>
-					</div>
+      <div class="container">
+        <h3>Different cell sizes</h3>
+        <div class="grid">
+          <div class="column" data-column="10"><div>10</div></div>
+          <div class="column" data-column="90"><div>90</div></div>
+          <div class="column" data-column="20"><div>20</div></div>
+          <div class="column" data-column="80"><div>80</div></div>
+          <div class="column" data-column="25"><div>25</div></div>
+          <div class="column" data-column="75"><div>75</div></div>
+          <div class="column" data-column="33"><div>33</div></div>
+          <div class="column" data-column="66"><div>66</div></div>
+          <div class="column" data-column="40"><div>40</div></div>
+          <div class="column" data-column="60"><div>60</div></div>
+          <div class="column" data-column="50"><div>50</div></div>
+          <div class="column" data-column="50"><div>50</div></div>
+        </div>
+      </div>
 
-					<div class="grid">
-						<div class="cell cell__4"><div class="box">4</div></div>
-						<div class="cell cell__4"><div class="box">4</div></div>
-						<div class="cell cell__4"><div class="box">4</div></div>
-						<div class="cell cell__4"><div class="box">4</div></div>
-					</div>
+      <div class="container">
+        <h3>Offset width</h3>
+        <div class="grid">
+          <div class="column" data-column="33"><div>33</div></div>
+          <div class="column" data-column="33" data-offset="33"><div>Offset 33</div></div>
+        </div>
+      </div>
 
-					<div class="grid">
-						<div class="cell cell__8"><div class="box">8</div></div>
-						<div class="cell cell__6"><div class="box">6</div></div>
-						<div class="cell cell__2"><div class="box">2</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Custom cell sizes for breakpoints</h3>
+        <div class="grid">
+          <div class="column" data-column-tablet="60" data-column-desktop="40"><div>60 tablet, 40 desktop</div></div>
+          <div class="column" data-column-tablet="40" data-column-desktop="60"><div>40 tablet, 60 desktop</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Custom cell sizes for breakpoints</h3>
-					<div class="grid">
-						<div class="cell cell__6 cell__8__md"><div class="box">6 (8 desktop)</div></div>
-						<div class="cell cell__4 cell__6__sm"><div class="box">4 (6 tablet)</div></div>
-						<div class="cell cell__2"><div class="box">2 (2 phone)</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Fixed cell sizes for breakpoints</h3>
+        <div class="grid" data-columns="3" data-columns-tablet="6">
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+          <div class="column"><div>3 (6 tablet)</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Grid default</h3>
-					<div class="grid">
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Grid default</h3>
+        <div class="grid">
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Grid justify center</h3>
-					<div class="grid" data-justify="center">
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Grid justify center</h3>
+        <div class="grid" data-justify-content="center">
+          <div class="column" data-column="30"><div>default</div></div>
+          <div class="column" data-column="30"><div>default</div></div>
+          <div class="column" data-column="30"><div>default</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Grid justify right</h3>
-					<div class="grid" data-justify="right">
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Grid justify right</h3>
+        <div class="grid" data-justify-content="flex-end">
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Grid justify around</h3>
-					<div class="grid" data-justify="around">
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Grid justify between</h3>
+        <div class="grid" data-justify-content="space-between">
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+        </div>
+      </div>
 
-				<section>
-					<h3>Grid justify between</h3>
-					<div class="grid" data-justify="between">
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-						<div class="cell"><div class="box">default</div></div>
-					</div>
-				</section>
+      <div class="container">
+        <h3>Grid justify around</h3>
+        <div class="grid" data-justify-content="space-around">
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+          <div class="column"><div>default</div></div>
+        </div>
+      </div>
 
-			</div>
+    </div>
 
-		</div>
+  </main>
 
-	</main>
 
-	<footer class="footer">
-		Build with <span class="love">❤</span> by <a href="//github.com/bechamel">bechamel</a>
-	</footer>
+  <footer class="footer">
+    <div class="container">
+    Build with <span class="love">❤</span> by <a href="//github.com/rock-ui" target="_blank">RockUI</a>
+    </div>
+  </footer>
 
 </body>
 </html>

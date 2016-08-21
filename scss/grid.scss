@@ -5,43 +5,48 @@
 // Styles
 //
 .#{$grid-classname} {
-  @include grid();
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  @include grid-gutter;
 
   // Herlper align classes
-  &[data-justify="left"] {
+  //
+  // Horizontal
+  &[data-justify-content="flex-start"] {
     justify-content: flex-start;
   }
-  &[data-justify="right"] {
+  &[data-justify-content="flex-end"] {
     justify-content: flex-end;
   }
-  &[data-justify="center"] {
+  &[data-justify-content="center"] {
     justify-content: center;
   }
-  &[data-justify="between"] {
+  &[data-justify-content="space-between"] {
     justify-content: space-between;
   }
-  &[data-justify="around"] {
+  &[data-justify-content="space-around"] {
     justify-content: space-around;
   }
 
-  // Align grid in center like container
-  // &[data-align="center"] {
-  //   @media (min-width: $grid-desktop-breakpoint) {
-  //     max-width: $grid-desktop-breakpoint;
-  //   }
-  //   @media (min-width: $grid-large-desktop-breakpoint) {
-  //     max-width: $grid-large-desktop-breakpoint;
-  //   }
-  //   @media (min-width: $grid-hd-desktop-breakpoint) {
-  //     max-width: $grid-hd-desktop-breakpoint;
-  //   }
-  // }
+  // Vertical
+  &[data-align-items="flex-start"] {
+    align-items: flex-start;
+  }
+  &[data-align-items="center"] {
+    align-items: center;
+  }
+  &[data-align-items="flex-end"] {
+    align-items: flex-end;
+  }
 }
 
 
-// Cell styles and align classes
-.#{$cell-classname} {
-  @include cell();
+// Column styles and align classes
+.#{$column-classname} {
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: $grid-gutter/2;
 
   // Generate phone columns
   @include phone_columns();
@@ -56,16 +61,17 @@
   @include large_desktop_columns();
 
   // Helper align classes
-  &[data-align="top"] {
+  &[data-align-self="flex-start"] {
     align-self: flex-start;
   }
-  &[data-align="middle"] {
+  &[data-align-self="center"] {
     align-self: center;
   }
-  &[data-align="bottom"] {
+  &[data-align-self="flex-end"] {
     align-self: flex-end;
   }
-  &[data-align="stretch"] {
+  &[data-align-self="stretch"] {
     align-self: stretch;
   }
+
 }
