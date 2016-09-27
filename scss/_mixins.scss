@@ -49,6 +49,7 @@
   @include column( (75), '75', $attribute, $screen_name);
   @include column( (80), '80', $attribute, $screen_name);
   @include column( (90), '90', $attribute, $screen_name);
+  @include column( (100), '100', $attribute, $screen_name);
 }
 
 
