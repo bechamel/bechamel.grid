@@ -35,7 +35,7 @@
   @extend %container__breakpoints;
 
   &[data-type=fluid] {
-    max-width: 0;
+    max-width: none;
   }
 }
 
