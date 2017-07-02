@@ -21,7 +21,7 @@
   padding-right: 16px; }
 
 .container[data-type=fluid] {
-  max-width: 0; }
+  max-width: none; }
 
 .text_container {
   max-width: 640px; }
