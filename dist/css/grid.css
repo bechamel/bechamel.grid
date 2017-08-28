@@ -232,6 +232,8 @@
         order: 9; }
       .column[data-order-tablet='10'] {
         order: 10; }
+      .column[data-offset-tablet='5'] {
+        margin-left: 5%; }
       .column[data-offset-tablet='10'] {
         margin-left: 10%; }
       .column[data-offset-tablet='20'] {
@@ -343,6 +345,8 @@
         order: 9; }
       .column[data-order-desktop='10'] {
         order: 10; }
+      .column[data-offset-desktop='5'] {
+        margin-left: 5%; }
       .column[data-offset-desktop='10'] {
         margin-left: 10%; }
       .column[data-offset-desktop='20'] {
@@ -454,6 +458,8 @@
         order: 9; }
       .column[data-order-large-desktop='10'] {
         order: 10; }
+      .column[data-offset-large-desktop='5'] {
+        margin-left: 5%; }
       .column[data-offset-large-desktop='10'] {
         margin-left: 10%; }
       .column[data-offset-large-desktop='20'] {
