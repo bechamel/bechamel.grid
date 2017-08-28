@@ -39,6 +39,7 @@
 
 @mixin columns($attribute: '-column', $screen_name: '') {
   @include column( (10), '10', $attribute, $screen_name);
+  @include column( (16), '16', $attribute, $screen_name);
   @include column( (20), '20', $attribute, $screen_name);
   @include column( (25), '25', $attribute, $screen_name);
   @include column( (100/3), '33', $attribute, $screen_name);
