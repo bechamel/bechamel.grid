@@ -63,6 +63,9 @@
   .column[data-column='20'] {
     max-width: 20%;
     flex-basis: 20%; }
+  .column[data-column='16'] {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
   .column[data-column='25'] {
     max-width: 25%;
     flex-basis: 25%; }
@@ -113,6 +116,8 @@
     order: 9; }
   .column[data-order='10'] {
     order: 10; }
+  .column[data-offset='5'] {
+    margin-left: 5%; }
   .column[data-offset='10'] {
     margin-left: 10%; }
   .column[data-offset='20'] {
@@ -168,6 +173,9 @@
       .column[data-column-tablet='10'] {
         max-width: 10%;
         flex-basis: 10%; }
+      .column[data-column-tablet='16'] {
+        max-width: 16.66667%;
+        flex-basis: 16.66667%; }
       .column[data-column-tablet='20'] {
         max-width: 20%;
         flex-basis: 20%; }
@@ -224,6 +232,8 @@
         order: 9; }
       .column[data-order-tablet='10'] {
         order: 10; }
+      .column[data-offset-tablet='5'] {
+        margin-left: 5%; }
       .column[data-offset-tablet='10'] {
         margin-left: 10%; }
       .column[data-offset-tablet='20'] {
@@ -279,6 +289,9 @@
       .column[data-column-desktop='10'] {
         max-width: 10%;
         flex-basis: 10%; }
+      .column[data-column-desktop='16'] {
+        max-width: 16.66667%;
+        flex-basis: 16.66667%; }
       .column[data-column-desktop='20'] {
         max-width: 20%;
         flex-basis: 20%; }
@@ -332,6 +345,8 @@
         order: 9; }
       .column[data-order-desktop='10'] {
         order: 10; }
+      .column[data-offset-desktop='5'] {
+        margin-left: 5%; }
       .column[data-offset-desktop='10'] {
         margin-left: 10%; }
       .column[data-offset-desktop='20'] {
@@ -387,6 +402,9 @@
       .column[data-column-large-desktop='10'] {
         max-width: 10%;
         flex-basis: 10%; }
+      .column[data-column-large-desktop='16'] {
+        max-width: 16.66667%;
+        flex-basis: 16.66667%; }
       .column[data-column-large-desktop='20'] {
         max-width: 20%;
         flex-basis: 20%; }
@@ -440,6 +458,8 @@
         order: 9; }
       .column[data-order-large-desktop='10'] {
         order: 10; }
+      .column[data-offset-large-desktop='5'] {
+        margin-left: 5%; }
       .column[data-offset-large-desktop='10'] {
         margin-left: 10%; }
       .column[data-offset-large-desktop='20'] {
